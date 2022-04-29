@@ -1,0 +1,12 @@
+ch/constructo/backend/repositories/UserRepository.class
+ch/constructo/backend/enums/Role.class
+ch/constructo/backend/repositories/ConstructionStepRepository.class
+ch/constructo/backend/enums/GarmentType.class
+ch/constructo/backend/entities/User.class
+ch/constructo/backend/entities/ConstructionStep.class
+ch/constructo/backend/repositories/UserResultRepository.class
+ch/constructo/backend/entities/Garment.class
+ch/constructo/backend/entities/UserResult.class
+ch/constructo/backend/repositories/GarmentRepository.class
+ch/constructo/backend/entities/AbstractEntity.class
+ch/constructo/backend/enums/StepType.class

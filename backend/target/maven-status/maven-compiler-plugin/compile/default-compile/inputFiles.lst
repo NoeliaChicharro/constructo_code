@@ -1,0 +1,12 @@
+/Users/nch/Documents/constructo_project/constructo_code/backend/src/main/java/ch/constructo/backend/enums/StepType.java
+/Users/nch/Documents/constructo_project/constructo_code/backend/src/main/java/ch/constructo/backend/enums/GarmentType.java
+/Users/nch/Documents/constructo_project/constructo_code/backend/src/main/java/ch/constructo/backend/entities/ConstructionStep.java
+/Users/nch/Documents/constructo_project/constructo_code/backend/src/main/java/ch/constructo/backend/entities/UserResult.java
+/Users/nch/Documents/constructo_project/constructo_code/backend/src/main/java/ch/constructo/backend/enums/Role.java
+/Users/nch/Documents/constructo_project/constructo_code/backend/src/main/java/ch/constructo/backend/entities/Garment.java
+/Users/nch/Documents/constructo_project/constructo_code/backend/src/main/java/ch/constructo/backend/repositories/ConstructionStepRepository.java
+/Users/nch/Documents/constructo_project/constructo_code/backend/src/main/java/ch/constructo/backend/repositories/UserRepository.java
+/Users/nch/Documents/constructo_project/constructo_code/backend/src/main/java/ch/constructo/backend/repositories/UserResultRepository.java
+/Users/nch/Documents/constructo_project/constructo_code/backend/src/main/java/ch/constructo/backend/entities/AbstractEntity.java
+/Users/nch/Documents/constructo_project/constructo_code/backend/src/main/java/ch/constructo/backend/repositories/GarmentRepository.java
+/Users/nch/Documents/constructo_project/constructo_code/backend/src/main/java/ch/constructo/backend/entities/User.java

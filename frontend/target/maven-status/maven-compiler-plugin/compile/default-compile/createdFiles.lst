@@ -1,0 +1,6 @@
+ch/constructo/frontend/Application.class
+ch/constructo/frontend/views/about/AboutView.class
+ch/constructo/frontend/views/MainLayout.class
+ch/constructo/frontend/views/MainLayout$MenuItemInfo.class
+ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class
+ch/constructo/frontend/views/dashboard/HelloWorldView.class

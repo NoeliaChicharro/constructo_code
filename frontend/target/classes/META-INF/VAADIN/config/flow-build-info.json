@@ -1,0 +1,18 @@
+{
+  "productionMode": false,
+  "useDeprecatedV14Bootstrapping": false,
+  "eagerServerLoad": false,
+  "npmFolder": "/Users/nch/Documents/constructo_project/constructo_code/frontend",
+  "node.version": "v16.14.2",
+  "node.download.root": "https://nodejs.org/dist/",
+  "generatedFolder": "/Users/nch/Documents/constructo_project/constructo_code/frontend/target/frontend",
+  "frontendFolder": "/Users/nch/Documents/constructo_project/constructo_code/frontend/frontend",
+  "connect.javaSourceFolder": "/Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/java",
+  "javaResourceFolder": "/Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/resources",
+  "connect.applicationProperties": "/Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/resources/application.properties",
+  "connect.openApiFile": "/Users/nch/Documents/constructo_project/constructo_code/frontend/target/generated-resources/openapi.json",
+  "project.frontend.generated": "/Users/nch/Documents/constructo_project/constructo_code/frontend/frontend/generated",
+  "pnpm.enable": false,
+  "require.home.node": false,
+  "build.folder": "target"
+}

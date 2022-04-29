@@ -1,0 +1,27 @@
+version: '2.1'
+
+services:
+  sidacDb:
+    container_name: sqlServer
+    image: registry.marisma.net/qualicasa/database/sqlserver:8683
+    restart: always
+    networks:
+      sidacDb:
+        ipv4_address: 172.24.0.2
+    environment:
+      - "ACCEPT_EULA=Y"
+      - "SA_PASSWORD=wuschtel5!"
+      - "MSSQL_PID=Developer"
+      - "MSSQL_BACKUP_DIR=/var/opt/mssql/backup"
+    ports:
+      - "1433:1433"
+    volumes:
+      - /Users/nch/docker/mssql:/var/opt/mssql
+
+networks:
+  sidacDb:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.24.0.0/16
+          gateway: 172.24.0.1
