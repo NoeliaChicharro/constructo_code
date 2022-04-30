@@ -1,31 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="frontend:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/security/ConfigureUIServiceInitListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/security/ConstructoAuthenticationProvidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/security/CustomRequestCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/security/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/security/SecurityUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/security/UserDetailsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/security/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/exceptions/AccessDeniedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/exceptions/AccessDeniedExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/exceptions/PortalInternalServerError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/login/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/backend-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/backend-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/ch/constructo/backend/repositories/GarmentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/ch/constructo/backend/repositories/GarmentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/classes/ch/constructo/backend/repositories/UserResultRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/ch/constructo/backend/repositories/UserResultRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/frontend-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/frontend-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/security/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/security/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/backend-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/frontend-1.0-SNAPSHOT.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +38,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -103,9 +101,16 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.163" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.163" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/frontend" />
+      <option name="COMMON_VM_ARGUMENTS" value="-Dsidac_local=true -Xms128M -Xmx4512M -server -Duser.timezone=Europe/Zurich -XX:+UseStringDeduplication -Djava.awt.headless=true -Dfile.encoding=UTF-8" />
       <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment />
+      <deployment>
+        <artifact name="frontend:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/frontend" />
+          </settings>
+        </artifact>
+      </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="e1f91d6a-b579-4709-90ec-fa9335c10f8c" />
         <option name="HTTP_PORT" value="8081" />
@@ -165,6 +170,9 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="frontend:war exploded" />
+        </option>
       </method>
     </configuration>
     <list>
@@ -185,7 +193,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651233193236</updated>
-      <workItem from="1651233194953" duration="11255000" />
+      <workItem from="1651233194953" duration="12451000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -208,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651241534020</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add security and basic login view">
+      <created>1651310075251</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1651310075251</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +246,8 @@
     <MESSAGE value="init commit / new project structure" />
     <MESSAGE value="add git ignore files" />
     <MESSAGE value="add all services" />
-    <option name="LAST_COMMIT_MESSAGE" value="add all services" />
+    <MESSAGE value="add security and basic login view" />
+    <option name="LAST_COMMIT_MESSAGE" value="add security and basic login view" />
   </component>
   <component name="se.expertsystem.intellij.aop.aspectj.AspectJProjectComponent">
     <setting name="isActivated" value="false" />
