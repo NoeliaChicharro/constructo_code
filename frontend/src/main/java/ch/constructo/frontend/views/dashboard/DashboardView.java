@@ -9,15 +9,15 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 
-@PageTitle("Hello World")
-@Route(value = "hello", layout = MainLayout.class)
+@PageTitle("Constructo")
+@Route(value = "dashboard", layout = MainLayout.class)
 @RouteAlias(value = "", layout = MainLayout.class)
-public class HelloWorldView extends HorizontalLayout {
+public class DashboardView extends HorizontalLayout {
 
   private TextField name;
   private Button sayHello;
 
-  public HelloWorldView() {
+  public DashboardView() {
     name = new TextField("Your name");
     sayHello = new Button("Say hello");
     sayHello.addClickListener(e -> {

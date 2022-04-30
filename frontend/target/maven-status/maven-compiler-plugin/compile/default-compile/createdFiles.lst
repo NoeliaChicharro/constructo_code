@@ -1,8 +1,8 @@
 ch/constructo/frontend/Application.class
 ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class
 ch/constructo/frontend/views/login/LoginView.class
-ch/constructo/frontend/views/dashboard/HelloWorldView.class
 ch/constructo/frontend/ui/exceptions/PortalInternalServerError.class
+ch/constructo/frontend/views/dashboard/DashboardView.class
 ch/constructo/frontend/views/about/AboutView.class
 ch/constructo/frontend/ui/exceptions/AccessDeniedExceptionHandler.class
 ch/constructo/frontend/views/MainLayout.class

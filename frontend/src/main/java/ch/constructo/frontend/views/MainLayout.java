@@ -1,7 +1,6 @@
 package ch.constructo.frontend.views;
 
-import ch.constructo.frontend.views.about.AboutView;
-import ch.constructo.frontend.views.dashboard.HelloWorldView;
+import ch.constructo.frontend.views.dashboard.DashboardView;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -107,9 +106,9 @@ public class MainLayout extends AppLayout {
 
   private MenuItemInfo[] createMenuItems() {
     return new MenuItemInfo[]{ //
-        new MenuItemInfo("Hello World", "la la-globe", HelloWorldView.class), //
+        new MenuItemInfo("Hello World", "la la-globe", DashboardView.class), //
 
-        new MenuItemInfo("About", "la la-file", AboutView.class), //
+        //new MenuItemInfo("About", "la la-file", AboutView.class), //
 
     };
   }
