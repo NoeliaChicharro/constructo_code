@@ -136,7 +136,7 @@
     </dependency>
 
     <!-- For security -->
-    <!-- <dependency>
+     <dependency>
          <groupId>org.springframework.security</groupId>
          <artifactId>spring-security-web</artifactId>
      </dependency>
@@ -144,7 +144,7 @@
          <groupId>org.springframework.security</groupId>
          <artifactId>spring-security-config</artifactId>
      </dependency>
--->
+
     <!-- For Integration Testing -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
