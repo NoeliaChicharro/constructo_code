@@ -1,7 +1,6 @@
-package ch.constructo.backend.security;
+package ch.constructo.frontend.security;
 
 import ch.constructo.frontend.ui.exceptions.AccessDeniedException;
-import ch.constructo.frontend.views.login.LoginView;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.router.BeforeEnterEvent;
 import com.vaadin.flow.server.ServiceInitEvent;

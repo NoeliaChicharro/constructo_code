@@ -1,4 +1,4 @@
-package ch.constructo.backend.security;
+package ch.constructo.frontend.security;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

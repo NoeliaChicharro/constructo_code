@@ -1,9 +1,10 @@
-package ch.constructo.backend.security;
+package ch.constructo.frontend.security;
 
 import ch.constructo.frontend.ui.exceptions.AccessDeniedExceptionHandler;
 import ch.constructo.frontend.ui.exceptions.PortalInternalServerError;
 import ch.constructo.frontend.views.login.LoginView;
-import com.vaadin.flow.server.ServletHelper;
+
+import com.vaadin.flow.server.HandlerHelper;
 import com.vaadin.flow.shared.ApplicationConstants;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.security.access.annotation.Secured;
@@ -28,10 +29,15 @@ public final class SecurityUtils {
    * @return true if is an internal framework request. false otherwise
    */
   static boolean isFrameworkInternalRequest(HttpServletRequest request) {
+/*
     final String parameterValue = request.getParameter(ApplicationConstants.REQUEST_TYPE_PARAMETER);
     return parameterValue != null
         && Stream.of(ServletHelper.RequestType.values())
         .anyMatch(r -> r.getIdentifier().equals(parameterValue));
+*/
+    final String parameterValue = request.getParameter(ApplicationConstants.REQUEST_TYPE_PARAMETER);
+    return parameterValue != null
+        && Stream.of(HandlerHelper.RequestType.values()).anyMatch(r -> r.getIdentifier().equals(parameterValue));
   }
 
   /**

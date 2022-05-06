@@ -36,4 +36,8 @@ public abstract class AbstractEntity {
     return getId().equals(other.getId());
   }
 
+  @Override
+  public int hashCode() {
+    return super.hashCode();
+  }
 }

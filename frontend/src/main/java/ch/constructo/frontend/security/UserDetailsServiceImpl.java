@@ -1,4 +1,4 @@
-package ch.constructo.backend.security;
+package ch.constructo.frontend.security;
 
 import ch.constructo.backend.entities.User;
 import ch.constructo.backend.services.UserService;

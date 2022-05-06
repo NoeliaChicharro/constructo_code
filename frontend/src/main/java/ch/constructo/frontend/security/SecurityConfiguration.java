@@ -1,4 +1,4 @@
-package ch.constructo.backend.security;
+package ch.constructo.frontend.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

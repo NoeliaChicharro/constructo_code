@@ -1,4 +1,4 @@
-package ch.constructo.backend.security;
+package ch.constructo.frontend.security;
 
 import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
 

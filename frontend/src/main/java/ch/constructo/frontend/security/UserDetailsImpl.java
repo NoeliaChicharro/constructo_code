@@ -1,4 +1,4 @@
-package ch.constructo.backend.security;
+package ch.constructo.frontend.security;
 
 import ch.constructo.backend.entities.User;
 import org.springframework.security.core.GrantedAuthority;
