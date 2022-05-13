@@ -146,6 +146,13 @@
       <scope>runtime</scope>
     </dependency>
 
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjtools</artifactId>
+      <version>1.6.2</version>
+    </dependency>
+
+
     <!-- exclude junit 4 -->
     <dependency>
       <groupId>junit</groupId>

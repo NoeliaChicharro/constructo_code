@@ -25,11 +25,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
   @Override
   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-    auth.authenticationProvider(patternAppAuthenticationProvider());
+    auth.authenticationProvider(constructoAppAuthenticationProvider());
   }
 
   @Bean
-  public AuthenticationProvider patternAppAuthenticationProvider() {
+  public AuthenticationProvider constructoAppAuthenticationProvider() {
     AuthenticationProvider provider = new ConstructoAuthenticationProvidor();
 
     return provider;
