@@ -1,6 +1,6 @@
 package ch.constructo.frontend;
 
-import ch.constructo.backend.config.BackendConfig;
+import ch.constructo.master.data.config.BackendConfig;
 import ch.constructo.frontend.security.SecurityConfiguration;
 import ch.constructo.frontend.views.MainLayout;
 import com.vaadin.flow.component.dependency.NpmPackage;
@@ -10,7 +10,6 @@ import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.lumo.Lumo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication(scanBasePackageClasses = {

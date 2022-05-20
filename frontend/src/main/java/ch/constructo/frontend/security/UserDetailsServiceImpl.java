@@ -1,7 +1,7 @@
 package ch.constructo.frontend.security;
 
-import ch.constructo.backend.entities.User;
-import ch.constructo.backend.services.UserService;
+import ch.constructo.master.data.entities.User;
+import ch.constructo.master.data.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.security.core.userdetails.UserDetails;

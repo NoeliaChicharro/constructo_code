@@ -1,6 +1,6 @@
 package ch.constructo.frontend.security;
 
-import ch.constructo.backend.entities.User;
+import ch.constructo.master.data.entities.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
