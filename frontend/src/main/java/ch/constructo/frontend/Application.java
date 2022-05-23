@@ -1,6 +1,6 @@
 package ch.constructo.frontend;
 
-import ch.constructo.master.data.config.BackendConfig;
+import ch.constructo.backend.config.BackendConfig;
 import ch.constructo.frontend.security.SecurityConfiguration;
 import ch.constructo.frontend.views.MainLayout;
 import com.vaadin.flow.component.dependency.NpmPackage;

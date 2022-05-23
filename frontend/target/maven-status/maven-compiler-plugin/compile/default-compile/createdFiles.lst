@@ -8,9 +8,9 @@ ch/constructo/frontend/ui/exceptions/AccessDeniedExceptionHandler.class
 ch/constructo/frontend/security/UserDetailsImpl$3.class
 ch/constructo/frontend/security/UserDetailsImpl.class
 ch/constructo/frontend/security/ConstructoAuthenticationProvidor.class
-ch/constructo/backend/config/BackendConfig.class
 ch/constructo/frontend/security/ConfigureUIServiceInitListener.class
 ch/constructo/frontend/security/SecurityUtils.class
+ch/constructo/master/data/config/BackendConfig.class
 ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class
 ch/constructo/frontend/ui/exceptions/PortalInternalServerError.class
 ch/constructo/frontend/views/MainLayout.class

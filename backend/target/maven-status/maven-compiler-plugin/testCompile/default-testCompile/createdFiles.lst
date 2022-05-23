@@ -1,4 +1,3 @@
-ch/constructo/backend/config/ConstructoPersistenceConfig.class
-ch/constructo/backend/config/DbConfig.class
-ch/constructo/backend/services/TestUserInMemorie.class
-ch/constructo/backend/config/DbTestCaseConfig.class
+ch/constructo/master/data/config/DbTestCaseConfig.class
+ch/constructo/master/data/config/TestDbConfig.class
+ch/constructo/master/data/config/DbConfig.class
