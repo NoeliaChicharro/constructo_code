@@ -1,4 +1,4 @@
-package ch.constructo.master.data.config;
+package ch.constructo.backend.config;
 
 import ch.constructo.backend.data.config.Constants;
 import org.springframework.context.annotation.*;
@@ -13,11 +13,8 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 @EnableAspectJAutoProxy
 public class DbConfig {
 
-
   @Bean
   public static PropertySourcesPlaceholderConfigurer placeHolderConfigurer() {
     return new PropertySourcesPlaceholderConfigurer();
   }
-
-
 }

@@ -1,3 +1,6 @@
 /Users/nch/Documents/constructo_project/constructo_code/backend/src/test/java/ch/constructo/backend/config/TestDbConfig.java
+/Users/nch/Documents/constructo_project/constructo_code/backend/src/test/java/ch/constructo/backend/services/TestGarmentInMemory.java
 /Users/nch/Documents/constructo_project/constructo_code/backend/src/test/java/ch/constructo/backend/config/DbTestCaseConfig.java
+/Users/nch/Documents/constructo_project/constructo_code/backend/src/test/java/ch/constructo/backend/services/TestUserInMemory.java
 /Users/nch/Documents/constructo_project/constructo_code/backend/src/test/java/ch/constructo/backend/config/DbConfig.java
+/Users/nch/Documents/constructo_project/constructo_code/backend/src/test/java/ch/constructo/backend/services/TestConstructionStepInMemory.java

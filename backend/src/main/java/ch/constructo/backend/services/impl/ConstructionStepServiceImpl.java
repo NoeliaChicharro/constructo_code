@@ -72,4 +72,9 @@ public class ConstructionStepServiceImpl implements ConstructionStepService {
   public List<ConstructionStep> save(Iterable<ConstructionStep> iterable) {
     return (List<ConstructionStep>) repository.saveAll(iterable);
   }
+
+  @Override
+  public ConstructionStep findByText(String s){
+    return repository.findByText(s);
+  }
 }
