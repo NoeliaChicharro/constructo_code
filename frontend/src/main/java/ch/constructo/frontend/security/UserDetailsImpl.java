@@ -66,8 +66,14 @@ public class UserDetailsImpl implements UserDetails, Serializable {
 
     init();
 
-    authorities.add(ROLE_NONE);
-    authorities.add(ROLE_USER);
+    switch (user.getRole()){
+      case ADMIN:
+        authorities.add(ROLE_ADMIN);
+      case STUDENT:
+        authorities.add(ROLE_USER);
+    }
+    //authorities.add(ROLE_NONE);
+    //authorities.add(ROLE_USER);
 
   }
 

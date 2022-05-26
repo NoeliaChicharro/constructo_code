@@ -32,9 +32,9 @@ create table user_result (
     rightAmount int,
     answerTime date,
     passed boolean,
-    attempted_garment_id bigint not null,
+    attemptedGarment_id bigint not null,
     user_id bigint not null
 );
 
-alter table user_result add constraint user_result_garmentRefFk foreign key (attempted_garment_id) references garment;
+alter table user_result add constraint user_result_garmentRefFk foreign key (attemptedGarment_id) references garment;
 alter table user_result add constraint user_result_userRefFk foreign key (user_id) references constructo_user;

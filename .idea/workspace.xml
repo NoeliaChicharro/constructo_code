@@ -10,22 +10,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestConstructionStepInMemory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestGarmentInMemory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestUserInMemory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestUserResultInMemory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/ConstructionStepRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/ConstructionStepRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/ConstructionStepService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/ConstructionStepService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/ConstructionStepServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/ConstructionStepServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sql/V1.0__create_user_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sql/V1.0__create_user_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sql/V1.1__insert_admin.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sql/V1.1__insert_admin.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sql/V2.0__create_garment_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sql/V2.0__create_garment_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sql/V2.1__create_construction_step_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sql/V2.1__create_construction_step_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sql/V2.2__create_user_result_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sql/V2.2__create_user_result_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/UserResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/UserResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/test/db/initial-master-database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/db/initial-master-database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/config/DbConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/config/DbConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/config/DbTestCaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/config/DbTestCaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/config/TestDbConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/config/TestDbConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestUserInMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestUserInMemory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vaadin/vaadin.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vaadin/vaadin.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@vaadin/field-highlighter/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@vaadin/field-highlighter/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/dashboard/DashboardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/dashboard/DashboardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/applications.properties" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/applications.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/masterdata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/masterdata.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/gridProConnector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/vaadin-map/mapConnector.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/vaadin-map/synchronization/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/vaadin-map/synchronization/layers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/vaadin-map/synchronization/sources.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/vaadin-map/synchronization/styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/vaadin-map/synchronization/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/vaadin-map/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack.generated.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack.generated.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,8 +142,8 @@
       <recent name="ch.constructo.backend.config" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestUserResultInMemory">
-    <configuration name="TestConstructionStepInMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="TestUserInMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
@@ -132,13 +152,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ch.constructo.backend.services" />
-      <option name="MAIN_CLASS_NAME" value="ch.constructo.backend.services.TestConstructionStepInMemory" />
+      <option name="MAIN_CLASS_NAME" value="ch.constructo.backend.services.TestUserInMemory" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestGarmentInMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestUserInMemory.createUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
@@ -147,23 +167,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ch.constructo.backend.services" />
-      <option name="MAIN_CLASS_NAME" value="ch.constructo.backend.services.TestGarmentInMemory" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestGarmentInMemory.test03findGarment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ch.constructo.backend.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ch.constructo.backend.services" />
-      <option name="MAIN_CLASS_NAME" value="ch.constructo.backend.services.TestGarmentInMemory" />
-      <option name="METHOD_NAME" value="test03findGarment" />
+      <option name="MAIN_CLASS_NAME" value="ch.constructo.backend.services.TestUserInMemory" />
+      <option name="METHOD_NAME" value="createUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -200,20 +205,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="frontend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch.constructo.frontend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ch.constructo.frontend.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.TestGarmentInMemory" />
-      <item itemvalue="JUnit.TestGarmentInMemory.test03findGarment" />
-      <item itemvalue="JUnit.TestConstructionStepInMemory" />
       <item itemvalue="JUnit.TestUserResultInMemory" />
       <item itemvalue="JUnit.TestUserResultInMemory.test03findConstructionStep" />
+      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="JUnit.TestUserInMemory.createUser" />
+      <item itemvalue="JUnit.TestUserInMemory" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.TestUserInMemory" />
+        <item itemvalue="JUnit.TestUserInMemory.createUser" />
         <item itemvalue="JUnit.TestUserResultInMemory" />
         <item itemvalue="JUnit.TestUserResultInMemory.test03findConstructionStep" />
-        <item itemvalue="JUnit.TestConstructionStepInMemory" />
-        <item itemvalue="JUnit.TestGarmentInMemory" />
-        <item itemvalue="JUnit.TestGarmentInMemory.test03findGarment" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +247,7 @@
       <workItem from="1651332842860" duration="5000" />
       <workItem from="1651332861342" duration="23002000" />
       <workItem from="1652945289768" duration="6099000" />
-      <workItem from="1653038179416" duration="9981000" />
+      <workItem from="1653038179416" duration="17899000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -301,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653311069736</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="unit tests for services">
+      <created>1653319255139</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1653319255139</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +370,8 @@
     <MESSAGE value="Data Config" />
     <MESSAGE value="trying to get config right" />
     <MESSAGE value="review" />
-    <option name="LAST_COMMIT_MESSAGE" value="review" />
+    <MESSAGE value="unit tests for services" />
+    <option name="LAST_COMMIT_MESSAGE" value="unit tests for services" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -354,11 +380,6 @@
           <url>file://$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config/base/BasePersistenceConfig.java</url>
           <line>118</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/Application.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/test/ConstructoPersistenceConfig.java</url>
@@ -374,6 +395,36 @@
           <url>file://$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/test/ConstructoPersistenceConfig.java</url>
           <line>103</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config/ConstructoPersistenceConfig.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config/base/DatabaseProperties.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/ConstructoAuthenticationProvidor.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/ConstructoAuthenticationProvidor.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/ConstructoAuthenticationProvidor.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/UserDetailsImpl.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

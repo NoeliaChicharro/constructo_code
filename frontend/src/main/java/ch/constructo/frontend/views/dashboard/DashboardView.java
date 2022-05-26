@@ -8,10 +8,12 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
+import org.springframework.security.access.annotation.Secured;
 
 @PageTitle("Constructo")
 @Route(value = "dashboard", layout = MainLayout.class)
 @RouteAlias(value = "", layout = MainLayout.class)
+@Secured({"ROLE_ADMIN"})
 public class DashboardView extends HorizontalLayout {
 
   private TextField name;

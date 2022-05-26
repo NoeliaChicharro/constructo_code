@@ -15,7 +15,7 @@ public class UserResult extends AbstractEntity {
   private User user;
 
   @ManyToOne
-  @JoinColumn(name = "attempted_garment_id")
+  @JoinColumn(name = "attemptedGarment_id")
   private Garment garment;
 
   private Integer rightAmount;

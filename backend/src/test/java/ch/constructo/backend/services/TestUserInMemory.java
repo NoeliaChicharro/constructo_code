@@ -8,6 +8,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
@@ -22,6 +24,8 @@ public class TestUserInMemory {
 
   @Autowired
   private UserService userService;
+
+  private static PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
   @Test
   public void test01Save(){
@@ -69,7 +73,8 @@ public class TestUserInMemory {
     user.setLastName("Chicharro");
     user.setUsername("nch");
     user.setEmail("noelia@email.ch");
-    user.setPassword("password");
+    user.setPassword(passwordEncoder.encode("test"));
+    System.out.println(user.getPassword());
     user.setRole(Role.ADMIN);
 
     return userService.save(user);
