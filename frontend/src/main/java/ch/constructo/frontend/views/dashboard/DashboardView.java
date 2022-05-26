@@ -13,7 +13,7 @@ import org.springframework.security.access.annotation.Secured;
 @PageTitle("Constructo")
 @Route(value = "dashboard", layout = MainLayout.class)
 @RouteAlias(value = "", layout = MainLayout.class)
-@Secured({"ROLE_ADMIN"})
+@Secured({"ROLE_ADMIN", "ROLE_USER"})
 public class DashboardView extends HorizontalLayout {
 
   private TextField name;

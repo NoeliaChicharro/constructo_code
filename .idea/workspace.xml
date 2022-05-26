@@ -10,42 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/sql/V1.0__create_user_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sql/V1.0__create_user_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/sql/V1.1__insert_admin.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sql/V1.1__insert_admin.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/sql/V2.0__create_garment_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sql/V2.0__create_garment_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/sql/V2.1__create_construction_step_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sql/V2.1__create_construction_step_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/sql/V2.2__create_user_result_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sql/V2.2__create_user_result_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/UserResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/UserResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/db/initial-master-database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/db/initial-master-database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestUserInMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestUserInMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vaadin/vaadin.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vaadin/vaadin.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@vaadin/field-highlighter/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@vaadin/field-highlighter/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/dashboard/DashboardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/dashboard/DashboardView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/applications.properties" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/applications.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/masterdata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/masterdata.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/gridProConnector.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/vaadin-map/mapConnector.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/vaadin-map/synchronization/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/vaadin-map/synchronization/layers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/vaadin-map/synchronization/sources.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/vaadin-map/synchronization/styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/vaadin-map/synchronization/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/flow-frontend/vaadin-map/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/webpack.generated.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/webpack.generated.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +218,7 @@
       <workItem from="1651332842860" duration="5000" />
       <workItem from="1651332861342" duration="23002000" />
       <workItem from="1652945289768" duration="6099000" />
-      <workItem from="1653038179416" duration="17899000" />
+      <workItem from="1653038179416" duration="18585000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -326,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653319255139</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="project ist startable">
+      <created>1653562846897</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1653562846897</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +349,8 @@
     <MESSAGE value="trying to get config right" />
     <MESSAGE value="review" />
     <MESSAGE value="unit tests for services" />
-    <option name="LAST_COMMIT_MESSAGE" value="unit tests for services" />
+    <MESSAGE value="project ist startable" />
+    <option name="LAST_COMMIT_MESSAGE" value="project ist startable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
