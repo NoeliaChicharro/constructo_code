@@ -11,7 +11,7 @@ public class ConstructoRoutingDataSource extends AbstractConstructoRoutingDataSo
   private final transient Logger log = LoggerFactory.getLogger(getClass());
 
   /**
-   * <p>Constructor for SidacRoutingDataSource.</p>
+   * <p>Constructor for ConstructoRoutingDataSource.</p>
    *
    * @param dataSourceMap a {@link DataSourceMapDescriptor} object.
    */

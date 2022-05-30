@@ -17,7 +17,7 @@ public class ConstructoDataSourceInitializer extends DataSourceInitializer {
 
   protected final Logger log = LoggerFactory.getLogger(this.getClass());
 
-  private AbstractConstructoRoutingDataSource dataSource;
+  private final AbstractConstructoRoutingDataSource dataSource;
   private DatabasePopulator databasePopulator;
   private DatabasePopulator databaseCleaner;
   private boolean enabled = true;
@@ -26,7 +26,7 @@ public class ConstructoDataSourceInitializer extends DataSourceInitializer {
 
 
   /**
-   * <p>Constructor for SidacDataSourceInitializer.</p>
+   * <p>Constructor for ConstructoDataSourceInitializer.</p>
    *
    * @param dataSource a {@link AbstractConstructoRoutingDataSource} object.
    */

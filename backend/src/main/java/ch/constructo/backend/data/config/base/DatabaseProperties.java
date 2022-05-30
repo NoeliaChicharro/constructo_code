@@ -76,7 +76,7 @@ public class DatabaseProperties {
 
   private boolean initDatabase;
 
-  private Resource initScript;
+  private final Resource initScript;
 
   private String hibernateDialect;
 

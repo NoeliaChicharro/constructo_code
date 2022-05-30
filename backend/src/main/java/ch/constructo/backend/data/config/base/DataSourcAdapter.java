@@ -8,7 +8,7 @@ import java.sql.SQLFeatureNotSupportedException;
 import java.util.logging.Logger;
 
 public class DataSourcAdapter implements DataSource {
-  private DataSource dataSource;
+  private final DataSource dataSource;
   private DatabaseProperties databaseProperties;
 
   /**

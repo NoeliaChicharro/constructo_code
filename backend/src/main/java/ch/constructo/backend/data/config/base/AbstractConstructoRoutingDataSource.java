@@ -6,12 +6,12 @@ import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 public class AbstractConstructoRoutingDataSource extends AbstractRoutingDataSource {
 
-  private static Logger log = LoggerFactory.getLogger(AbstractConstructoRoutingDataSource.class);
+  private static final Logger log = LoggerFactory.getLogger(AbstractConstructoRoutingDataSource.class);
 
   private DataSourceMapDescriptor dataSourceMap;
 
   /**
-   * <p>Constructor for AbstractSidacRoutingDataSource.</p>
+   * <p>Constructor for AbstractConstructoRoutingDataSource.</p>
    *
    * @param dataSourceMap a {@link ch.constructo.backend.config.DataSourceMapDescriptor} object.
    */

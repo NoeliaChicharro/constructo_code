@@ -25,7 +25,7 @@ public class TestUserInMemory {
   @Autowired
   private UserService userService;
 
-  private static PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+  private static final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
   @Test
   public void test01Save(){

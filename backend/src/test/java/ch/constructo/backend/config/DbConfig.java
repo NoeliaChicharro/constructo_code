@@ -6,8 +6,8 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
 @ComponentScan(basePackages = {
-    Constants.CH_QUALICASA_MASTER_DATA,
-    Constants.CH_QUALICASA_MASTER_SERVICES
+    Constants.CH_CONSTRUCTO_MASTER_DATA,
+    Constants.CH_CONSTRUCTO_MASTER_SERVICES
 })
 @PropertySource(value = "classpath:/masterdata.properties")
 @EnableAspectJAutoProxy

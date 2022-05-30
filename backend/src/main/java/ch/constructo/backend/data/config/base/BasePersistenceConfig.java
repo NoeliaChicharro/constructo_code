@@ -75,8 +75,7 @@ public abstract class BasePersistenceConfig {
     if (isJndiEnabled()) {
       final JndiDataSourceLookup dsLookup = new JndiDataSourceLookup();
       dsLookup.setResourceRef(true);
-      DataSource dataSource = dsLookup.getDataSource(getJndiName());
-      return dataSource;
+      return dsLookup.getDataSource(getJndiName());
     } else {
 
       HikariConfig config = new HikariConfig();
@@ -98,9 +97,7 @@ public abstract class BasePersistenceConfig {
         config.setConnectionTestQuery("Select 1;");
       }
 
-      HikariDataSource dataSource = new HikariDataSource(config);
-
-      return dataSource;
+      return new HikariDataSource(config);
 
     }
   }

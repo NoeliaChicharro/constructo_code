@@ -23,12 +23,12 @@ import javax.sql.DataSource;
 @Configuration
 @EnableTransactionManagement()
 @EnableJpaRepositories(
-    basePackages = {Constants.CH_QUALICASA_MASTER_REPOSITORY_PACKAGE},
+    basePackages = {Constants.CH_CONSTRUCTO_MASTER_REPOSITORY_PACKAGE},
     entityManagerFactoryRef = Constants.CH_CONSTRUCTO_MASTER_EM,
-    transactionManagerRef = Constants.CH_QUALICASA_MASTER_DATA_TRX
+    transactionManagerRef = Constants.CH_CONSTRUCTO_MASTER_DATA_TRX
 )
 @ComponentScan(basePackages = {
-        Constants.CH_QUALICASA_MASTER_SERVICES})
+        Constants.CH_CONSTRUCTO_MASTER_SERVICES})
 @EnableAspectJAutoProxy
 public class ConstructoPersistenceConfig extends BasePersistenceConfig {
 
@@ -78,7 +78,7 @@ public class ConstructoPersistenceConfig extends BasePersistenceConfig {
    * @return an array of {@link java.lang.String} objects.
    */
   public String[] scanDomainPackages() {
-    return new String[]{Constants.CH_QUALICASA_MASTER_DOMAIN_PACKAGE};
+    return new String[]{Constants.CH_CONSTRUCTO_MASTER_DOMAIN_PACKAGE};
   }
 
   /**
@@ -86,7 +86,7 @@ public class ConstructoPersistenceConfig extends BasePersistenceConfig {
    *
    * @return a {@link org.springframework.transaction.PlatformTransactionManager} object.
    */
-  @Bean(name = Constants.CH_QUALICASA_MASTER_DATA_TRX)
+  @Bean(name = Constants.CH_CONSTRUCTO_MASTER_DATA_TRX)
   public PlatformTransactionManager masterdataDataTrxManager() {
     JpaTransactionManager transactionManager = new JpaTransactionManager();
     transactionManager.setEntityManagerFactory(masterdataEM().getObject());
@@ -94,7 +94,7 @@ public class ConstructoPersistenceConfig extends BasePersistenceConfig {
   }
 
   /**
-   * <p>sidacappEM.</p>
+   * <p>constructoEM.</p>
    *
    * @return a {@link org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean} object.
    */
@@ -120,23 +120,23 @@ public class ConstructoPersistenceConfig extends BasePersistenceConfig {
   }
 
   /**
-   * <p>sidacappDS.</p>
+   * <p>constructoDS.</p>
    *
    * @return a {@link javax.sql.DataSource} object.
    */
-  @Bean(name = Constants.CH_QUALICASA_MASTER_DS)
+  @Bean(name = Constants.CH_CONSTRUCTO_MASTER_DS)
   public DataSource masterdataDS() {
     return super.dataSource();
   }
 
   /**
-   * <p>sidacppSourceInitializer.</p>
+   * <p>constructoSourceInitializer.</p>
    *
    * @param dataSource a {@link javax.sql.DataSource} object.
    * @return a {@link org.springframework.jdbc.datasource.init.DataSourceInitializer} object.
    */
   @Bean(name = "SourceInitializer")
-  public DataSourceInitializer constructoSourceInitializer(@Qualifier(Constants.CH_QUALICASA_MASTER_DS) DataSource dataSource) {
+  public DataSourceInitializer constructoSourceInitializer(@Qualifier(Constants.CH_CONSTRUCTO_MASTER_DS) DataSource dataSource) {
     return super.dataSourceInitializer(dataSource);
   }
 
