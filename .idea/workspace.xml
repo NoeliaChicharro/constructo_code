@@ -10,19 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/components/navigation/AppBar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/layout/Horizontal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/BoxSizing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainViewFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/components/FlexBoxLayout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/layout/Size.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/layout/Top.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/BorderRadius.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/Display.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/Overflow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/derby.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainViewFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainViewFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +120,21 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="TestGarmentInMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch.constructo.backend.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch.constructo.backend.services" />
+      <option name="MAIN_CLASS_NAME" value="ch.constructo.backend.services.TestGarmentInMemory" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestUserInMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
@@ -168,22 +181,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestUserResultInMemory.test03findConstructionStep" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ch.constructo.backend.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ch.constructo.backend.services" />
-      <option name="MAIN_CLASS_NAME" value="ch.constructo.backend.services.TestUserResultInMemory" />
-      <option name="METHOD_NAME" value="test03findConstructionStep" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="frontend" />
       <extension name="coverage">
@@ -199,18 +196,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.TestUserResultInMemory" />
-      <item itemvalue="JUnit.TestUserResultInMemory.test03findConstructionStep" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="JUnit.TestUserInMemory.createUser" />
       <item itemvalue="JUnit.TestUserInMemory" />
+      <item itemvalue="JUnit.TestGarmentInMemory" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.TestGarmentInMemory" />
         <item itemvalue="JUnit.TestUserInMemory" />
         <item itemvalue="JUnit.TestUserInMemory.createUser" />
         <item itemvalue="JUnit.TestUserResultInMemory" />
-        <item itemvalue="JUnit.TestUserResultInMemory.test03findConstructionStep" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +223,7 @@
       <workItem from="1651332842860" duration="5000" />
       <workItem from="1651332861342" duration="23002000" />
       <workItem from="1652945289768" duration="6099000" />
-      <workItem from="1653038179416" duration="31075000" />
+      <workItem from="1653038179416" duration="34079000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -319,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653566446648</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add basic component to overview">
+      <created>1653913889612</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1653913889612</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,7 +370,8 @@
     <MESSAGE value="unit tests for services" />
     <MESSAGE value="project ist startable" />
     <MESSAGE value="create view for eap" />
-    <option name="LAST_COMMIT_MESSAGE" value="create view for eap" />
+    <MESSAGE value="add basic component to overview" />
+    <option name="LAST_COMMIT_MESSAGE" value="add basic component to overview" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -392,49 +397,19 @@
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config/ConstructoPersistenceConfig.java</url>
-          <line>195</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config/base/DatabaseProperties.java</url>
           <line>37</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java</url>
-          <line>107</line>
-          <option name="timeStamp" value="32" />
+          <line>140</line>
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainViewFrame.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainViewFrame.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="40" />
+          <line>53</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

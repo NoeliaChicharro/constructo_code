@@ -2,6 +2,7 @@ package ch.constructo.frontend.views.eap;
 
 import ch.constructo.backend.data.entities.Garment;
 import ch.constructo.backend.services.GarmentService;
+import ch.constructo.frontend.security.SecurityUtils;
 import ch.constructo.frontend.ui.components.FlexBoxLayout;
 import ch.constructo.frontend.ui.components.navigation.AppBar;
 import ch.constructo.frontend.ui.layout.Horizontal;
@@ -11,18 +12,27 @@ import ch.constructo.frontend.ui.util.UIUtils;
 import ch.constructo.frontend.views.MainLayout;
 import ch.constructo.frontend.views.MainViewFrame;
 import com.vaadin.flow.component.AttachEvent;
+import com.vaadin.flow.component.Html;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.data.provider.DataProvider;
+import com.vaadin.flow.data.provider.ListDataProvider;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.security.access.annotation.Secured;
 import com.vaadin.flow.component.Component;
+
+import java.util.*;
+
+import static java.lang.String.format;
 
 //@Component
 @PageTitle("Epa")
@@ -34,12 +44,14 @@ public class EapView extends MainViewFrame {
   private GarmentService garmentService;
 
   private Grid<Garment> grid;
+  private ListDataProvider<Garment> garmentListDataProvider;
 
   @Override
   protected void onAttach(AttachEvent attachEvent) {
     super.onAttach(attachEvent);
     initAppBar();
     setViewContent(createContent());
+    refreshGrid();
     //filter();
   }
 
@@ -62,7 +74,8 @@ public class EapView extends MainViewFrame {
   private Component createGrid(){
     grid = new Grid<>(Garment.class, false);
     grid.addClassName("garment-grid");
-    grid.setSizeFull();
+    grid.getElement().getStyle().set("heigt", "auto");
+    //grid.setSizeFull();
 
     grid.getColumns().forEach(col -> col.setAutoWidth(true));
 
@@ -100,6 +113,32 @@ public class EapView extends MainViewFrame {
     if (getContentPane() != null) {
       getContentPane().getStyle().set("width", "100%");
     }
+  }
+
+  void findAllGarments() {
+
+    Collection<Garment> content = new ArrayList<>();
+    content = executeFindAllGarments();
+
+    fillGarmentGrid(content);
+  }
+
+  private void fillGarmentGrid(Collection<Garment> content) {
+    if(content.size()==0){
+      garmentListDataProvider = DataProvider.ofCollection(new ArrayList<>());
+      grid.setDataProvider(garmentListDataProvider);
+    } else {
+      garmentListDataProvider = DataProvider.ofCollection(content);
+      grid.setDataProvider(garmentListDataProvider);
+    }
+  }
+
+  private void refreshGrid() {
+    findAllGarments();
+  }
+
+  protected List<Garment> executeFindAllGarments() {
+    return garmentService.findAll();
   }
 
 }

@@ -2,7 +2,6 @@ package ch.constructo.frontend.views;
 
 import com.vaadin.flow.component.*;
 import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PreserveOnRefresh;
 import org.slf4j.Logger;
