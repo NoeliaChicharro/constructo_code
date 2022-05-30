@@ -36,7 +36,7 @@ public class UserResultServiceImpl implements UserResultService {
 
   @Override
   public UserResult findOne(Long aLong) {
-    return null;
+    return repository.findOne(aLong);
   }
 
   @Override

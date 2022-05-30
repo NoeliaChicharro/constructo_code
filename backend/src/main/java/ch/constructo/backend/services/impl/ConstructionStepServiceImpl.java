@@ -35,7 +35,7 @@ public class ConstructionStepServiceImpl implements ConstructionStepService {
 
   @Override
   public ConstructionStep findOne(Long aLong) {
-    return null;
+    return repository.findOne(aLong);
   }
 
   @Override
