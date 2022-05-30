@@ -10,13 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/components/navigation/AppBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/layout/Horizontal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/BoxSizing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainViewFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/dashboard/DashboardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/dashboard/DashboardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +36,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -110,6 +117,7 @@
       <recent name="$PROJECT_DIR$/frontend/src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ch.constructo.frontend.views" />
       <recent name="ch.constructo.backend.config" />
     </key>
   </component>
@@ -218,7 +226,7 @@
       <workItem from="1651332842860" duration="5000" />
       <workItem from="1651332861342" duration="23002000" />
       <workItem from="1652945289768" duration="6099000" />
-      <workItem from="1653038179416" duration="18585000" />
+      <workItem from="1653038179416" duration="31075000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -304,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653562846897</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="create view for eap">
+      <created>1653566446648</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1653566446648</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +365,8 @@
     <MESSAGE value="review" />
     <MESSAGE value="unit tests for services" />
     <MESSAGE value="project ist startable" />
-    <option name="LAST_COMMIT_MESSAGE" value="project ist startable" />
+    <MESSAGE value="create view for eap" />
+    <option name="LAST_COMMIT_MESSAGE" value="create view for eap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -386,24 +402,39 @@
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/ConstructoAuthenticationProvidor.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="27" />
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/ConstructoAuthenticationProvidor.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="28" />
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/ConstructoAuthenticationProvidor.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="29" />
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/UserDetailsImpl.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="30" />
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainViewFrame.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainViewFrame.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,8 +1,10 @@
 package ch.constructo.frontend.views;
 
+import ch.constructo.frontend.ui.components.navigation.AppBar;
 import ch.constructo.frontend.views.dashboard.DashboardView;
 import ch.constructo.frontend.views.eap.EapView;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -11,10 +13,14 @@ import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.RouterLink;
 
+import java.util.Optional;
+
 /**
  * The main view is a top-level placeholder for other views.
  */
 public class MainLayout extends AppLayout {
+
+  private AppBar appBar;
 
   /**
    * A simple navigation item component, based on ListItem element.
@@ -69,6 +75,8 @@ public class MainLayout extends AppLayout {
     toggle.addClassNames("view-toggle");
     toggle.addThemeVariants(ButtonVariant.LUMO_CONTRAST);
     toggle.getElement().setAttribute("aria-label", "Menu toggle");
+
+    appBar = new AppBar("");
 
     viewTitle = new H1();
     viewTitle.addClassNames("view-title");
@@ -129,6 +137,20 @@ public class MainLayout extends AppLayout {
   private String getCurrentPageTitle() {
     PageTitle title = getContent().getClass().getAnnotation(PageTitle.class);
     return title == null ? "" : title.value();
+  }
+
+  public static MainLayout get() {
+    Optional<Component> first = UI.getCurrent().getChildren()
+        .filter(component -> component.getClass() == MainLayout.class)
+        .findFirst();
+    if(first.isPresent()){
+      return (MainLayout)first.get();
+    }
+    return null; //UI.getCurrent().navigate(MainView.class);
+  }
+
+  public AppBar getAppBar() {
+    return appBar;
   }
 }
 
