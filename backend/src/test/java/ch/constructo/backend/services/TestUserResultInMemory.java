@@ -32,6 +32,9 @@ public class TestUserResultInMemory {
   @Autowired
   private UserService userService;
 
+  /**
+   * <p>Test Save</p>
+   */
   @Test
   public void test01Save(){
     UserResult userResult = new UserResult();
@@ -45,11 +48,17 @@ public class TestUserResultInMemory {
     assertEquals("Id does not match ", Long.valueOf(1), saved.getId());
   }
 
+  /**
+   * <p>Test Delete</p>
+   */
   @Test
   public void test02deleteUserResult(){
     userResultService.deleteAll();
   }
 
+  /**
+   * <p>Test Find Multiple</p>
+   */
   @Test
   public void test04findUserResults() {
     createUserResultTwo();

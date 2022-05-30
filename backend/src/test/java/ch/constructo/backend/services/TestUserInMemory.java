@@ -27,6 +27,9 @@ public class TestUserInMemory {
 
   private static final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
+  /**
+   * <p>Test Save</p>
+   */
   @Test
   public void test01Save(){
 
@@ -43,12 +46,17 @@ public class TestUserInMemory {
     assertEquals("Id does not match ", Long.valueOf(1), saved.getId());
   }
 
+  /**
+   * <p>Test Delete</p>
+   */
   @Test
   public void test02deleteUser(){
     userService.deleteAll();
   }
 
-
+  /**
+   * <p>Test Find</p>
+   */
   @Test
   public void test03findUser(){
     createUser();
@@ -58,6 +66,9 @@ public class TestUserInMemory {
     assertEquals("Wrong user found ", "nch", found.getUsername());
   }
 
+  /**
+   * <p>Test Find Multiple</p>
+   */
   @Test
   public void test04findUsers() {
     createUserTwo();

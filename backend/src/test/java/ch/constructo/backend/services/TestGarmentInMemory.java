@@ -23,6 +23,9 @@ public class TestGarmentInMemory {
   @Autowired
   private GarmentService garmentService;
 
+  /**
+   * <p>Test Save</p>
+   */
   @Test
   public void test01saveGarment(){
 
@@ -37,12 +40,17 @@ public class TestGarmentInMemory {
     assertEquals("Id does not match ", Long.valueOf(1), saved.getId());
   }
 
+  /**
+   * <p>Test Delete</p>
+   */
   @Test
   public void test02deleteGarment(){
     garmentService.deleteAll();
   }
 
-
+  /**
+   * <p>Test Find</p>
+   */
   @Test
   public void test03findGarment(){
     createGarment();
@@ -52,6 +60,9 @@ public class TestGarmentInMemory {
     assertEquals("Wrong garment found ", "Blouse", found.getName());
   }
 
+  /**
+   * <p>Test Find Multiple</p>
+   */
   @Test
   public void test04findGarments() {
     createGarmentTwo();

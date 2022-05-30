@@ -28,6 +28,9 @@ public class TestConstructionStepInMemory {
   @Autowired
   private GarmentService garmentService;
 
+  /**
+   * <p>Test Save</p>
+   */
   @Test
   public void test01save(){
     ConstructionStep constructionStep = new ConstructionStep();
@@ -41,12 +44,18 @@ public class TestConstructionStepInMemory {
     assertEquals("Id does not match ", Long.valueOf(1), saved.getId());
   }
 
+  /**
+   * <p>Test Delete</p>
+   */
   @Test
   public void test02deleteConstructionStep(){
     constructionStepService.deleteAll();
   }
 
 
+  /**
+   * <p>Test Find</p>
+   */
   @Test
   public void test03findConstructionStep(){
     createConstructionStep();
@@ -56,8 +65,11 @@ public class TestConstructionStepInMemory {
     assertEquals("Wrong garment found ", "Double fabric", found.getText());
   }
 
+  /**
+   * <p>Test Find Multiple</p>
+   */
   @Test
-  public void test04findUsers() {
+  public void test04findConstructionSteps() {
     createConstructionStepTwo();
     List<ConstructionStep> constructionSteps = constructionStepService.findAll();
 

@@ -10,6 +10,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(classes = {DbConfig.class, ConstructoPersistenceConfig.class})
 public class TestDbConfig {
 
+  /**
+   * <p>Test Db Config</p>
+   */
   @Test
   public void testCOnfig(){
   }

@@ -7,9 +7,19 @@ import org.springframework.data.repository.query.Param;
 
 public interface ConstructionStepRepository extends CrudRepository<ConstructionStep, Long> {
 
+  /**
+   * <p>Finds One ConstructionStep by text</p>
+   * @param text a {@link java.lang.String} object.
+   * @return ConstructionStep
+   */
   @Query("select u from ConstructionStep u where u.text = :text")
   ConstructionStep findByText(@Param("text") String text);
 
+  /**
+   * <p>Finds One ConstraionStep by id</p>
+   * @param id a {@link java.lang.Long} object.
+   * @return ConstructionStep
+   */
   @Query("select a from ConstructionStep a WHERE a.id = :id")
   ConstructionStep findOne(@Param("id") Long id);
 }
