@@ -36,7 +36,7 @@ public class GarmentServiceImpl implements GarmentService {
 
   @Override
   public Garment findOne(Long aLong) {
-    return null;
+    return repository.findOne(aLong);
   }
 
   @Override

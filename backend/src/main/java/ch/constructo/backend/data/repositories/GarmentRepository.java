@@ -13,4 +13,8 @@ public interface GarmentRepository extends JpaRepository<Garment, Long> {
 
   @Query("select c from Garment c where c.garmentType = :garmentType")
   Garment findByGarmentType(@Param("garmentType") GarmentType garmentType);
+
+  @Query("select a from Garment a WHERE a.id = :id")
+  Garment findOne(@Param("id") Long id);
+
 }

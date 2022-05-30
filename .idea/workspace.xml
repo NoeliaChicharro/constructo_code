@@ -10,16 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/components/FlexBoxLayout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/layout/Size.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/layout/Top.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/BorderRadius.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/Display.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/Overflow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainViewFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainViewFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/GarmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/GarmentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/GarmentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/GarmentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +216,7 @@
       <workItem from="1651332842860" duration="5000" />
       <workItem from="1651332861342" duration="23002000" />
       <workItem from="1652945289768" duration="6099000" />
-      <workItem from="1653038179416" duration="34079000" />
+      <workItem from="1653038179416" duration="36277000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -323,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653913889612</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="framework">
+      <created>1653917226214</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1653917226214</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +371,8 @@
     <MESSAGE value="project ist startable" />
     <MESSAGE value="create view for eap" />
     <MESSAGE value="add basic component to overview" />
-    <option name="LAST_COMMIT_MESSAGE" value="add basic component to overview" />
+    <MESSAGE value="framework" />
+    <option name="LAST_COMMIT_MESSAGE" value="framework" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -400,16 +401,6 @@
           <url>file://$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config/base/DatabaseProperties.java</url>
           <line>37</line>
           <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java</url>
-          <line>140</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

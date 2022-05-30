@@ -2,31 +2,27 @@ package ch.constructo.frontend.views.eap;
 
 import ch.constructo.backend.data.entities.Garment;
 import ch.constructo.backend.services.GarmentService;
-import ch.constructo.frontend.security.SecurityUtils;
 import ch.constructo.frontend.ui.components.FlexBoxLayout;
 import ch.constructo.frontend.ui.components.navigation.AppBar;
 import ch.constructo.frontend.ui.layout.Horizontal;
 import ch.constructo.frontend.ui.layout.Top;
 import ch.constructo.frontend.ui.util.BoxSizing;
-import ch.constructo.frontend.ui.util.UIUtils;
 import ch.constructo.frontend.views.MainLayout;
 import ch.constructo.frontend.views.MainViewFrame;
+import ch.constructo.frontend.views.dashboard.DashboardView;
 import com.vaadin.flow.component.AttachEvent;
-import com.vaadin.flow.component.Html;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.notification.Notification;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
-import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.provider.DataProvider;
 import com.vaadin.flow.data.provider.ListDataProvider;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.security.access.annotation.Secured;
 import com.vaadin.flow.component.Component;
 
@@ -43,6 +39,7 @@ public class EapView extends MainViewFrame {
   @Autowired
   private GarmentService garmentService;
 
+  private Button selector;
   private Grid<Garment> grid;
   private ListDataProvider<Garment> garmentListDataProvider;
 
@@ -75,7 +72,6 @@ public class EapView extends MainViewFrame {
     grid = new Grid<>(Garment.class, false);
     grid.addClassName("garment-grid");
     grid.getElement().getStyle().set("heigt", "auto");
-    //grid.setSizeFull();
 
     grid.getColumns().forEach(col -> col.setAutoWidth(true));
 
@@ -90,6 +86,12 @@ public class EapView extends MainViewFrame {
     grid.addColumn(new ComponentRenderer<>(this::createGarmentType))
         .setHeader("Type")
         .setResizable(true);
+
+    grid.asSingleSelect().addValueChangeListener(e -> {
+      if(grid.getSelectionModel().getFirstSelectedItem().isPresent()){
+        rerouteToSelectedGarment(grid.getSelectionModel().getFirstSelectedItem().get());
+      }
+    });
 
     return grid;
   }
@@ -112,6 +114,13 @@ public class EapView extends MainViewFrame {
 
     if (getContentPane() != null) {
       getContentPane().getStyle().set("width", "100%");
+    }
+  }
+
+  private void rerouteToSelectedGarment(Garment garment){
+    Garment found = garmentService.findOne(garment.getId());
+    if (found != null){
+      UI.getCurrent().navigate(DashboardView.class);
     }
   }
 
