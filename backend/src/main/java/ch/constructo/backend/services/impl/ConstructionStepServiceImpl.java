@@ -1,5 +1,6 @@
 package ch.constructo.backend.services.impl;
 
+import ch.constructo.backend.data.entities.Garment;
 import ch.constructo.backend.services.ConstructionStepService;
 import ch.constructo.backend.data.entities.ConstructionStep;
 import ch.constructo.backend.data.repositories.ConstructionStepRepository;
@@ -77,4 +78,7 @@ public class ConstructionStepServiceImpl implements ConstructionStepService {
   public ConstructionStep findByText(String s){
     return repository.findByText(s);
   }
+
+  @Override
+  public ConstructionStep findByGarment(Garment garment) {return repository.findByGarment(garment);}
 }

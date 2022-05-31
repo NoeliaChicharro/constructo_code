@@ -12,17 +12,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/AbstractEntity.java" afterDir="false" />
+    <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="add javadocs comments">
+      <change afterPath="$PROJECT_DIR$/backend/sql/V1.5__insert_garment.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/sql/V1.6__insert_ConstructionStep.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sql/V2.0__create_garment_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sql/V1.2__create_garment_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sql/V2.1__create_construction_step_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sql/V1.3__create_construction_step_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sql/V2.2__create_user_result_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sql/V1.4__create_user_result_table.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/ConstructionStepRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/ConstructionStepRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/GarmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/GarmentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/UserResultRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/UserResultRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/config/TestDbConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/config/TestDbConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestConstructionStepInMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestConstructionStepInMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestGarmentInMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestGarmentInMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestUserInMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestUserInMemory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestUserResultInMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/services/TestUserResultInMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/ConstructionStepService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/ConstructionStepService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/ConstructionStepServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/ConstructionStepServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +228,7 @@
       <workItem from="1651332842860" duration="5000" />
       <workItem from="1651332861342" duration="23002000" />
       <workItem from="1652945289768" duration="6099000" />
-      <workItem from="1653038179416" duration="38794000" />
+      <workItem from="1653038179416" duration="40497000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -364,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653920739449</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add javadocs comments">
+      <created>1653921988412</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1653921988412</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +423,8 @@
     <MESSAGE value="* make grid selectable&#10;* provide right entity in selection&#10;* reroute on selection" />
     <MESSAGE value="add missing findOne(Long id) Method to all repositories, and services" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="add javadocs comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="add javadocs comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
