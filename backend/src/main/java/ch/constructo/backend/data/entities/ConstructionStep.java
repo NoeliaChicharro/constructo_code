@@ -25,6 +25,9 @@ public class ConstructionStep extends AbstractEntity {
   @Enumerated(EnumType.STRING)
   private StepType stepType;
 
+  @Size(max = 100)
+  private String uitities;
+
   public ConstructionStep() {
   }
 
@@ -50,5 +53,13 @@ public class ConstructionStep extends AbstractEntity {
 
   public void setStepType(StepType stepType) {
     this.stepType = stepType;
+  }
+
+  public String getUitities() {
+    return uitities;
+  }
+
+  public void setUitities(String uitities) {
+    this.uitities = uitities;
   }
 }

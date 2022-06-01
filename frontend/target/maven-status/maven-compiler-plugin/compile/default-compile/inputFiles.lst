@@ -6,6 +6,7 @@
 /Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/java/ch/constructo/frontend/ui/util/UIUtils.java
 /Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/java/ch/constructo/frontend/security/CurrentUser.java
 /Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/java/ch/constructo/frontend/ui/util/BorderRadius.java
+/Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java
 /Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/java/ch/constructo/frontend/ui/util/Shadow.java
 /Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/java/ch/constructo/frontend/ui/layout/Size.java
 /Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/java/ch/constructo/frontend/ui/exceptions/AccessDeniedExceptionHandler.java

@@ -39,7 +39,6 @@ public class EapView extends MainViewFrame {
   @Autowired
   private GarmentService garmentService;
 
-  private Button selector;
   private Grid<Garment> grid;
   private ListDataProvider<Garment> garmentListDataProvider;
 
@@ -120,7 +119,7 @@ public class EapView extends MainViewFrame {
   private void rerouteToSelectedGarment(Garment garment){
     Garment found = garmentService.findOne(garment.getId());
     if (found != null){
-      UI.getCurrent().navigate(DashboardView.class);
+      UI.getCurrent().navigate(ConstructionView.class);
     }
   }
 
