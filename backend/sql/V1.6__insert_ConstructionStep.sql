@@ -6,7 +6,7 @@ VALUES
 ('PREPARE', 'Markierungen anbringen', 1, 'Manuell'),
 ('PREPARE', 'Fixieren', 1, 'Fixierpresse'),
 ('PREPARE', 'Kleinteile vorbereiten', 1, null),
-('PREPATE', 'Längs und Achselnähte versäubern', 1, '504'),
+('PREPARE', 'Längs und Achselnähte versäubern', 1, '504'),
 ('CONSTRUCTION', 'Abnäher schliessen', 1, '301'),
 ('CONSTRUCTION', 'Teilungsnähte schliessen', 1, '301'),
 ('CONSTRUCTION', 'Verschluss verarbeiten', 1, '301'),

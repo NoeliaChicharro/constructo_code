@@ -1,9 +1,11 @@
 package ch.constructo.frontend.views.eap;
 
 import ch.constructo.backend.data.entities.ConstructionStep;
-import ch.constructo.backend.data.entities.Garment;
+import ch.constructo.backend.data.enums.StepType;
 import ch.constructo.backend.services.ConstructionStepService;
 import ch.constructo.backend.services.GarmentService;
+import ch.constructo.backend.services.UserResultService;
+import ch.constructo.backend.services.UserService;
 import ch.constructo.frontend.ui.components.FlexBoxLayout;
 import ch.constructo.frontend.ui.components.navigation.AppBar;
 import ch.constructo.frontend.ui.layout.Horizontal;
@@ -20,11 +22,17 @@ import com.vaadin.flow.component.orderedlayout.FlexLayout;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.data.provider.DataProvider;
+import com.vaadin.flow.data.provider.ListDataProvider;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 @PageTitle("Epa | Tool")
 @Route(value = "epaTool", layout = MainLayout.class)
@@ -36,6 +44,12 @@ public class ConstructionView extends MainViewFrame {
 
   @Autowired
   private ConstructionStepService constructionStepService;
+
+  @Autowired
+  private UserService userService;
+
+  @Autowired
+  private UserResultService resultService;
 
   /* Input */
   private HorizontalLayout inputWrapper;
@@ -59,12 +73,17 @@ public class ConstructionView extends MainViewFrame {
   private Label finishTitle;
   private Grid<ConstructionStep> finishGrid;
 
+  private ListDataProvider<ConstructionStep> listDataProvider;
+
+  // Make list (findAll) at the beginning, use this list on submit to check if user input is correct.
+  // Insert Values into grid
+
   @Override
   protected void onAttach(AttachEvent attachEvent) {
     super.onAttach(attachEvent);
     initAppBar();
     setViewContent(createContent());
-    //refreshGrid();
+    refreshGrid();
     //filter();
   }
 
@@ -103,11 +122,12 @@ public class ConstructionView extends MainViewFrame {
 
   private Component createPrepareList(){
     prepareWrapper = new VerticalLayout();
+    prepareWrapper.setHeight("350px");
     prepareTitle = new Label("Vorbereitung");
 
     prepareGrid = new Grid<>(ConstructionStep.class, false);
     prepareGrid.addClassName("construction-grid");
-    prepareGrid.getElement().getStyle().set("heigt", "auto");
+    prepareGrid.getElement().getStyle().set("heigt", "200px");
 
     prepareGrid.getColumns().forEach(col -> col.setAutoWidth(true));
 
@@ -125,11 +145,12 @@ public class ConstructionView extends MainViewFrame {
 
   private Component createConstructionList(){
     constructionWrapper = new VerticalLayout();
+    constructionWrapper.setHeight("350px");
     constructionTitle = new Label("Montage");
 
     constructionGrid = new Grid<>(ConstructionStep.class, false);
     constructionGrid.addClassName("construction-grid");
-    constructionGrid.getElement().getStyle().set("heigt", "auto");
+    constructionGrid.getElement().getStyle().set("heigt", "200px");
 
     constructionGrid.getColumns().forEach(col -> col.setAutoWidth(true));
 
@@ -147,11 +168,12 @@ public class ConstructionView extends MainViewFrame {
 
   private Component createFinishList(){
     finishWrapper = new VerticalLayout();
+    finishWrapper.setHeight("350px");
     finishTitle = new Label("Finish");
 
     finishGrid = new Grid<>(ConstructionStep.class, false);
     finishGrid.addClassName("construction-grid");
-    finishGrid.getElement().getStyle().set("heigt", "auto");
+    finishGrid.getElement().getStyle().set("heigt", "200px");
 
     finishGrid.getColumns().forEach(col -> col.setAutoWidth(true));
 
@@ -168,13 +190,12 @@ public class ConstructionView extends MainViewFrame {
   }
 
   private Component createText(ConstructionStep constructionStep){
-    return new Label(constructionStep.getStepType() != null ? constructionStep.getStepType().name() : "");
+    return new Label(constructionStep.getText() != null ? constructionStep.getText() : "");
   }
 
   private Component createUtitity(ConstructionStep constructionStep){
-    return new Label(constructionStep.getUitities() != null ? constructionStep.getUitities() : "");
+    return new Label(constructionStep.getUtilities() != null ? constructionStep.getUtilities() : "");
   }
-
 
   private void initAppBar(){
     AppBar appBar = MainLayout.get().getAppBar();
@@ -183,5 +204,67 @@ public class ConstructionView extends MainViewFrame {
     if (getContentPane() != null) {
       getContentPane().getStyle().set("width", "100%");
     }
+  }
+
+  /* Prepare */
+  void findAllPrepareSteps(){
+    Collection<ConstructionStep> content = new ArrayList<>();
+    content = executeFindAllPrepare();
+    fillPrepareGrid(content);
+  }
+
+  private void fillPrepareGrid(Collection<ConstructionStep> content) {
+    gridHandling(prepareGrid, content);
+  }
+
+  /* Constuction */
+  void findAllConstructionSteps(){
+    Collection<ConstructionStep> content = new ArrayList<>();
+    content = executeFindAllConstruction();
+    fillConstructionGrid(content);
+  }
+
+  private void fillConstructionGrid(Collection<ConstructionStep> content) {
+    gridHandling(constructionGrid, content);
+  }
+
+  /* Finish */
+  void findAllFinishSteps(){
+    Collection<ConstructionStep> content = new ArrayList<>();
+    content = executeFindAllFinish();
+    fillFinishGrid(content);
+  }
+
+  private void fillFinishGrid(Collection<ConstructionStep> content) {
+    gridHandling(finishGrid, content);
+  }
+
+  private void gridHandling(Grid<ConstructionStep> grid, Collection<ConstructionStep> content){
+    if(content.size()==0){
+      listDataProvider = DataProvider.ofCollection(new ArrayList<>());
+      grid.setDataProvider(listDataProvider);
+    } else {
+      listDataProvider = DataProvider.ofCollection(content);
+      grid.setDataProvider(listDataProvider);
+    }
+  }
+
+  private void refreshGrid() {
+    findAllPrepareSteps();
+    findAllConstructionSteps();
+    findAllFinishSteps();
+    //findAllSteps();
+  }
+
+  private List<ConstructionStep> executeFindAllPrepare(){
+    return constructionStepService.findAllByStepType(StepType.PREPARE);
+  }
+
+  private List<ConstructionStep> executeFindAllConstruction(){
+    return constructionStepService.findAllByStepType(StepType.CONSTRUCTION);
+  }
+
+  private List<ConstructionStep> executeFindAllFinish(){
+    return constructionStepService.findAllByStepType(StepType.FINISH);
   }
 }

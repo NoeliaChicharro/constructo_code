@@ -26,7 +26,7 @@ public class ConstructionStep extends AbstractEntity {
   private StepType stepType;
 
   @Size(max = 100)
-  private String uitities;
+  private String utilities;
 
   public ConstructionStep() {
   }
@@ -55,11 +55,11 @@ public class ConstructionStep extends AbstractEntity {
     this.stepType = stepType;
   }
 
-  public String getUitities() {
-    return uitities;
+  public String getUtilities() {
+    return utilities;
   }
 
-  public void setUitities(String uitities) {
-    this.uitities = uitities;
+  public void setUtilities(String utilities) {
+    this.utilities = utilities;
   }
 }

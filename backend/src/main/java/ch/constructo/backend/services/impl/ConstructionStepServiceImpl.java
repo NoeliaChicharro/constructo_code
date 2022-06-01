@@ -1,6 +1,7 @@
 package ch.constructo.backend.services.impl;
 
 import ch.constructo.backend.data.entities.Garment;
+import ch.constructo.backend.data.enums.StepType;
 import ch.constructo.backend.services.ConstructionStepService;
 import ch.constructo.backend.data.entities.ConstructionStep;
 import ch.constructo.backend.data.repositories.ConstructionStepRepository;
@@ -81,4 +82,7 @@ public class ConstructionStepServiceImpl implements ConstructionStepService {
 
   @Override
   public ConstructionStep findByGarment(Garment garment) {return repository.findByGarment(garment);}
+
+  @Override
+  public List<ConstructionStep> findAllByStepType(StepType stepType) {return repository.findAllByStepType(stepType);}
 }

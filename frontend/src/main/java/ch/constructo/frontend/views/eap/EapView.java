@@ -2,6 +2,7 @@ package ch.constructo.frontend.views.eap;
 
 import ch.constructo.backend.data.entities.Garment;
 import ch.constructo.backend.services.GarmentService;
+import ch.constructo.frontend.security.SecurityUtils;
 import ch.constructo.frontend.ui.components.FlexBoxLayout;
 import ch.constructo.frontend.ui.components.navigation.AppBar;
 import ch.constructo.frontend.ui.layout.Horizontal;
@@ -118,7 +119,7 @@ public class EapView extends MainViewFrame {
 
   private void rerouteToSelectedGarment(Garment garment){
     Garment found = garmentService.findOne(garment.getId());
-    if (found != null){
+    if (found != null && SecurityUtils.isUserLoggedIn()){
       UI.getCurrent().navigate(ConstructionView.class);
     }
   }
