@@ -1,6 +1,7 @@
 package ch.constructo.frontend.views.eap;
 
 import ch.constructo.backend.data.entities.ConstructionStep;
+import ch.constructo.backend.data.entities.UserResult;
 import ch.constructo.backend.data.enums.StepType;
 import ch.constructo.backend.services.ConstructionStepService;
 import ch.constructo.backend.services.GarmentService;
@@ -18,6 +19,7 @@ import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.FlexLayout;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -53,7 +55,6 @@ public class ConstructionView extends MainViewFrame {
 
   /* Input */
   private HorizontalLayout inputWrapper;
-  private TextField stepType;
   private TextField stepText;
   private TextField stepUtility;
   private Button submit;
@@ -74,9 +75,15 @@ public class ConstructionView extends MainViewFrame {
   private Grid<ConstructionStep> finishGrid;
 
   private ListDataProvider<ConstructionStep> listDataProvider;
+  private List<ConstructionStep> constructionSteps = new ArrayList<>();
+  private List<ConstructionStep> correctAnswers = new ArrayList<>();
+
+  private Label step = new Label();
+  private List<Label> labels = new ArrayList<>();
+  VerticalLayout labelLayout = new VerticalLayout();
 
   // Make list (findAll) at the beginning, use this list on submit to check if user input is correct.
-  // Insert Values into grid
+  // Insert Values into grid (refresh grid)
 
   @Override
   protected void onAttach(AttachEvent attachEvent) {
@@ -111,12 +118,27 @@ public class ConstructionView extends MainViewFrame {
 
   private Component createInputForm(){
     inputWrapper = new HorizontalLayout();
-    stepType = new TextField("Arbeitschritt");
     stepText = new TextField("Arbeitsmittel");
     stepUtility = new TextField("Betriebsmittel");
     submit = new Button("Bestätigen");
 
-    inputWrapper.add(stepType, stepText, stepUtility, submit);
+    submit.addClickListener(e -> {
+      for (ConstructionStep constructionStep : constructionSteps) {
+        if (constructionStep.getText().equals(stepText.getValue())) {
+          ConstructionStep constructionStepNew = new ConstructionStep();
+          constructionStepNew.setStepType(constructionStep.getStepType());
+          constructionStepNew.setGarment(constructionStep.getGarment());
+          constructionStepNew.setText(stepText.getValue());
+          constructionStepNew.setUtilities(stepUtility.getValue());
+          correctAnswers.add(constructionStepNew);
+          Notification.show("Whue, correct!");
+          // Refresh here;
+          break;
+        }
+      }
+    });
+
+    inputWrapper.add(stepText, stepUtility, submit);
     return inputWrapper;
   }
 
@@ -253,18 +275,23 @@ public class ConstructionView extends MainViewFrame {
     findAllPrepareSteps();
     findAllConstructionSteps();
     findAllFinishSteps();
-    //findAllSteps();
   }
 
   private List<ConstructionStep> executeFindAllPrepare(){
-    return constructionStepService.findAllByStepType(StepType.PREPARE);
+    List<ConstructionStep> prep = constructionStepService.findAllByStepType(StepType.PREPARE);
+    constructionSteps.addAll(prep);
+    return prep;
   }
 
   private List<ConstructionStep> executeFindAllConstruction(){
-    return constructionStepService.findAllByStepType(StepType.CONSTRUCTION);
+    List<ConstructionStep> cons = constructionStepService.findAllByStepType(StepType.CONSTRUCTION);
+    constructionSteps.addAll(cons);
+    return cons;
   }
 
   private List<ConstructionStep> executeFindAllFinish(){
-    return constructionStepService.findAllByStepType(StepType.FINISH);
+    List<ConstructionStep> finish = constructionStepService.findAllByStepType(StepType.FINISH);
+    constructionSteps.addAll(finish);
+    return finish;
   }
 }
