@@ -77,6 +77,14 @@ public class TestConstructionStepInMemory {
     assertEquals("Id does not match ", 2, constructionSteps.size());
   }
 
+  @Test
+  public void test05findByType(){
+   List<ConstructionStep> constructionSteps = constructionStepService.findAllByStepType(StepType.PREPARE);
+
+    assertNotNull("Users not found ", constructionSteps);
+    assertEquals("Amount does not match ", 1, constructionSteps.size());
+  }
+
   public Garment createGarment(){
     Garment garment = new Garment();
     garment.setName("Blouse");

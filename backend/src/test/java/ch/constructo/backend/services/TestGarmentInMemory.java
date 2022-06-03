@@ -72,6 +72,22 @@ public class TestGarmentInMemory {
     assertEquals("Id does not match ", 2, garments.size());
   }
 
+  @Test
+  public void test05findByType(){
+    Garment garment = garmentService.findByGarmentType(GarmentType.BLOUSE);
+
+    assertNotNull("Users not found ", garment);
+    assertEquals("Amount does not match ", "Blouse", garment.getName());
+  }
+
+  @Test
+  public void test06findOne(){
+    Garment garment = garmentService.findOne(3L);
+
+    assertNotNull("Users not found ", garment);
+    assertEquals("Amount does not match ", "Skirt", garment.getName());
+  }
+
   public Garment createGarment(){
     Garment garment = new Garment();
     garment.setName("Blouse");

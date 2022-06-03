@@ -78,6 +78,14 @@ public class TestUserInMemory {
     assertEquals("Amount does not match ", 2, users.size());
   }
 
+  @Test
+  public void test05findOne(){
+    User user = userService.findOne(3L);
+
+    assertNotNull("Users not found ", user);
+    assertEquals("Amount does not match ", "npi", user.getUsername());
+  }
+
   public User createUser(){
     User user = new User();
     user.setFirstName("Noelia");
