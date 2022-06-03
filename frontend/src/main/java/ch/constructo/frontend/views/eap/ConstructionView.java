@@ -1,12 +1,14 @@
 package ch.constructo.frontend.views.eap;
 
 import ch.constructo.backend.data.entities.ConstructionStep;
+import ch.constructo.backend.data.entities.User;
 import ch.constructo.backend.data.entities.UserResult;
 import ch.constructo.backend.data.enums.StepType;
 import ch.constructo.backend.services.ConstructionStepService;
 import ch.constructo.backend.services.GarmentService;
 import ch.constructo.backend.services.UserResultService;
 import ch.constructo.backend.services.UserService;
+import ch.constructo.frontend.security.SecurityUtils;
 import ch.constructo.frontend.ui.components.FlexBoxLayout;
 import ch.constructo.frontend.ui.components.navigation.AppBar;
 import ch.constructo.frontend.ui.layout.Horizontal;
@@ -293,5 +295,9 @@ public class ConstructionView extends MainViewFrame {
     List<ConstructionStep> finish = constructionStepService.findAllByStepType(StepType.FINISH);
     constructionSteps.addAll(finish);
     return finish;
+  }
+
+  private UserResult findUser(){
+    return resultService.findByUser(SecurityUtils.getCurrentLoggedUserId());
   }
 }

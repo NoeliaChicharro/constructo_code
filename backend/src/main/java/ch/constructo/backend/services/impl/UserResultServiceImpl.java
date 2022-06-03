@@ -1,5 +1,6 @@
 package ch.constructo.backend.services.impl;
 
+import ch.constructo.backend.data.entities.User;
 import ch.constructo.backend.services.UserResultService;
 import ch.constructo.backend.data.entities.Garment;
 import ch.constructo.backend.data.entities.UserResult;
@@ -83,4 +84,7 @@ public class UserResultServiceImpl implements UserResultService {
   public UserResult findByPassed(boolean passed) {
     return repository.findByPassed(passed);
   }
+
+  @Override
+  public UserResult findByUser(String username){return repository.findByUser(username);}
 }

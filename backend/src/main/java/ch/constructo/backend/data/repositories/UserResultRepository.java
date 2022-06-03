@@ -1,6 +1,7 @@
 package ch.constructo.backend.data.repositories;
 
 import ch.constructo.backend.data.entities.Garment;
+import ch.constructo.backend.data.entities.User;
 import ch.constructo.backend.data.entities.UserResult;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -34,4 +35,7 @@ public interface UserResultRepository extends JpaRepository<UserResult, Long> {
    */
   @Query("select a from UserResult a WHERE a.id = :id")
   UserResult findOne(@Param("id") Long id);
+
+  @Query("select a from UserResult a WHERE a.user = :username")
+  UserResult findByUser(@Param("username")String username);
 }
