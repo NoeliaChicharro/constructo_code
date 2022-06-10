@@ -13,13 +13,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/resources/webapp/sleeve.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/ConstructionStepRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/ConstructionStepRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/ConstructionStepService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/ConstructionStepService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/ConstructionStepServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/ConstructionStepServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +87,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -104,18 +100,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/main/resources" />
       <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images" />
       <recent name="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/icons" />
       <recent name="$PROJECT_DIR$/frontend/frontend" />
-      <recent name="$PROJECT_DIR$/frontend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/main/resources/webapp" />
+      <recent name="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images" />
+      <recent name="$PROJECT_DIR$/frontend/src/main/resources/images" />
       <recent name="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/config" />
       <recent name="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config" />
-      <recent name="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config/base" />
-      <recent name="$PROJECT_DIR$/backend/src/main/archive" />
-      <recent name="$PROJECT_DIR$/frontend/src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ch.constructo.frontend.views" />
@@ -226,7 +222,7 @@
       <workItem from="1651332842860" duration="5000" />
       <workItem from="1651332861342" duration="23002000" />
       <workItem from="1652945289768" duration="6099000" />
-      <workItem from="1653038179416" duration="59650000" />
+      <workItem from="1653038179416" duration="61331000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -410,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654243056914</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="display user input in grid if answer is correct">
+      <created>1654847846364</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1654847846364</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,7 +447,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add git ignore files" />
     <MESSAGE value="add all services" />
     <MESSAGE value="add security and basic login view" />
     <MESSAGE value="change security dependency location" />
@@ -469,7 +471,8 @@
     <MESSAGE value="fill grids with dummy data and check user input" />
     <MESSAGE value="find current user for userResult" />
     <MESSAGE value="some more tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="some more tests" />
+    <MESSAGE value="display user input in grid if answer is correct" />
+    <option name="LAST_COMMIT_MESSAGE" value="display user input in grid if answer is correct" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

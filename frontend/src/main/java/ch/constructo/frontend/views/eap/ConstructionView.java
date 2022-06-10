@@ -23,6 +23,7 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
@@ -38,6 +39,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.aspectj.weaver.ast.Not;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.security.access.annotation.Secured;
 
 import java.util.ArrayList;
@@ -67,6 +69,7 @@ public class ConstructionView extends MainViewFrame {
 
   private Grid grid;
   private VerticalLayout gridWrapper;
+  VerticalLayout imageLayout;
   private ListDataProvider<ConstructionStep> listDataProvider;
   private List<ConstructionStep> constructionSteps = new ArrayList<>();
   private List<ConstructionStep> correctAnswers = new ArrayList<>();
@@ -89,7 +92,7 @@ public class ConstructionView extends MainViewFrame {
 
   private Component createContent(){
     VerticalLayout verticalLayout = new VerticalLayout();
-    VerticalLayout imageLayout = new VerticalLayout();
+    imageLayout = new VerticalLayout();
 
     verticalLayout.add(setupForm());
     verticalLayout.add(setupGrid());
@@ -124,8 +127,8 @@ public class ConstructionView extends MainViewFrame {
       constructionStep.setUtilities(stepUtility.getValue());
 
       sendStep(constructionStep);
-      stepText.setValue(null);
-      stepUtility.setValue(null);
+      stepText.setValue("");
+      stepUtility.setValue("");
     });
 
     return new HorizontalLayout(stepText, stepUtility, button);
@@ -136,10 +139,22 @@ public class ConstructionView extends MainViewFrame {
       return;
     for (ConstructionStep actualStep : actualSteps) {
       if (constructionStep.getText().equals(actualStep.getText())) {
+        setupImage(true);
         constructionSteps.add(constructionStep);
       }
     }
     this.refreshGrid();
+  }
+
+  private Component setupImage(boolean isCorrect){
+    Image image = new Image();
+    if (isCorrect){
+      image.setSrc("images/sleeve.png");
+      image.setAlt("");
+      imageLayout.add(image);
+      return image;
+    }
+    return null;
   }
 
   private Component setupGrid() {
@@ -149,7 +164,7 @@ public class ConstructionView extends MainViewFrame {
     grid.addColumn(new ComponentRenderer<>(this::createText))
         .setHeader("Arbeitsmittel")
         .setResizable(true);
-    grid.addColumn(new ComponentRenderer<>(this::createText))
+    grid.addColumn(new ComponentRenderer<>(this::createUtitity))
         .setHeader("Arbeitsmittel")
         .setResizable(true);
     grid.setItems(constructionSteps);
