@@ -28,7 +28,7 @@ public interface ConstructionStepRepository extends CrudRepository<ConstructionS
   ConstructionStep findOne(@Param("id") Long id);
 
   @Query("select c from ConstructionStep c WHERE c.garment = :garment")
-  ConstructionStep findByGarment(@Param("garment")Garment garment);
+  List<ConstructionStep> findByGarment(@Param("garment")Garment garment);
 
   @Query("select b from ConstructionStep b WHERE b.stepType = :stepType")
   List<ConstructionStep> findAllByStepType(@Param("stepType")StepType stepType);

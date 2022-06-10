@@ -121,6 +121,7 @@ public class EapView extends MainViewFrame {
     Garment found = garmentService.findOne(garment.getId());
     if (found != null && SecurityUtils.isUserLoggedIn()){
       UI.getCurrent().navigate(ConstructionView.class);
+      // @TODO: id to next view
     }
   }
 

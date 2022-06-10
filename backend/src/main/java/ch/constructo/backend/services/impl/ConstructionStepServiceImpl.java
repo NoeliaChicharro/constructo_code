@@ -81,7 +81,7 @@ public class ConstructionStepServiceImpl implements ConstructionStepService {
   }
 
   @Override
-  public ConstructionStep findByGarment(Garment garment) {return repository.findByGarment(garment);}
+  public List<ConstructionStep> findByGarment(Garment garment) {return repository.findByGarment(garment);}
 
   @Override
   public List<ConstructionStep> findAllByStepType(StepType stepType) {return repository.findAllByStepType(stepType);}

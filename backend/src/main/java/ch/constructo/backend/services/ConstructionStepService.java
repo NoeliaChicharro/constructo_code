@@ -9,7 +9,7 @@ import java.util.List;
 public interface ConstructionStepService extends BaseDataService<ConstructionStep>{
   ConstructionStep findByText(String s);
 
-  ConstructionStep findByGarment(Garment garment);
+  List<ConstructionStep> findByGarment(Garment garment);
 
   List<ConstructionStep> findAllByStepType(StepType stepType);
 }

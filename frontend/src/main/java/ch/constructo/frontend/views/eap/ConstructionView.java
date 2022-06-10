@@ -1,8 +1,9 @@
 package ch.constructo.frontend.views.eap;
 
 import ch.constructo.backend.data.entities.ConstructionStep;
-import ch.constructo.backend.data.entities.User;
+import ch.constructo.backend.data.entities.Garment;
 import ch.constructo.backend.data.entities.UserResult;
+import ch.constructo.backend.data.enums.GarmentType;
 import ch.constructo.backend.data.enums.StepType;
 import ch.constructo.backend.services.ConstructionStepService;
 import ch.constructo.backend.services.GarmentService;
@@ -19,8 +20,12 @@ import ch.constructo.frontend.views.MainViewFrame;
 import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.grid.Grid;
+import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.FlexLayout;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -31,6 +36,7 @@ import com.vaadin.flow.data.provider.ListDataProvider;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import org.aspectj.weaver.ast.Not;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 
@@ -56,36 +62,20 @@ public class ConstructionView extends MainViewFrame {
   private UserResultService resultService;
 
   /* Input */
-  private HorizontalLayout inputWrapper;
   private TextField stepText;
   private TextField stepUtility;
-  private Button submit;
 
-  /* Prepare */
-  private VerticalLayout prepareWrapper;
-  private Label prepareTitle;
-  private Grid<ConstructionStep> prepareGrid;
-
-  /* Construction */
-  private VerticalLayout constructionWrapper;
-  private Label constructionTitle;
-  private Grid<ConstructionStep> constructionGrid;
-
-  /* Finish */
-  private VerticalLayout finishWrapper;
-  private Label finishTitle;
-  private Grid<ConstructionStep> finishGrid;
-
+  private Grid grid;
+  private VerticalLayout gridWrapper;
   private ListDataProvider<ConstructionStep> listDataProvider;
   private List<ConstructionStep> constructionSteps = new ArrayList<>();
   private List<ConstructionStep> correctAnswers = new ArrayList<>();
+  private List<ConstructionStep> actualSteps;
 
-  private Label step = new Label();
-  private List<Label> labels = new ArrayList<>();
-  VerticalLayout labelLayout = new VerticalLayout();
+  private UserResult user;
 
-  // Make list (findAll) at the beginning, use this list on submit to check if user input is correct.
-  // Insert Values into grid (refresh grid)
+  private static Div hint;
+
 
   @Override
   protected void onAttach(AttachEvent attachEvent) {
@@ -93,17 +83,16 @@ public class ConstructionView extends MainViewFrame {
     initAppBar();
     setViewContent(createContent());
     refreshGrid();
-    //filter();
+    findGarmentsConstructionStep();
+    //findUser();
   }
 
   private Component createContent(){
     VerticalLayout verticalLayout = new VerticalLayout();
     VerticalLayout imageLayout = new VerticalLayout();
 
-    verticalLayout.add(createInputForm());
-    verticalLayout.add(createPrepareList());
-    verticalLayout.add(createConstructionList());
-    verticalLayout.add(createFinishList());
+    verticalLayout.add(setupForm());
+    verticalLayout.add(setupGrid());
 
     imageLayout.add(new Label("I am the image part"));
 
@@ -118,99 +107,61 @@ public class ConstructionView extends MainViewFrame {
     return content;
   }
 
-  private Component createInputForm(){
-    inputWrapper = new HorizontalLayout();
+  private Component setupForm() {
     stepText = new TextField("Arbeitsmittel");
     stepUtility = new TextField("Betriebsmittel");
-    submit = new Button("Bestätigen");
 
-    submit.addClickListener(e -> {
-      for (ConstructionStep constructionStep : constructionSteps) {
-        if (constructionStep.getText().equals(stepText.getValue())) {
-          ConstructionStep constructionStepNew = new ConstructionStep();
-          constructionStepNew.setStepType(constructionStep.getStepType());
-          constructionStepNew.setGarment(constructionStep.getGarment());
-          constructionStepNew.setText(stepText.getValue());
-          constructionStepNew.setUtilities(stepUtility.getValue());
-          correctAnswers.add(constructionStepNew);
-          Notification.show("Whue, correct!");
-          // Refresh here;
-          break;
-        }
+    Button button = new Button("Send invite");
+    button.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+    button.addClickListener(e -> {
+
+      if (stepUtility.getValue() == null){
+        stepUtility.setValue("");
       }
+      ConstructionStep constructionStep = new ConstructionStep();
+      constructionStep.setText(stepText.getValue());
+      constructionStep.setGarment(findGarmentForNow());
+      constructionStep.setUtilities(stepUtility.getValue());
+
+      sendStep(constructionStep);
+      stepText.setValue(null);
+      stepUtility.setValue(null);
     });
 
-    inputWrapper.add(stepText, stepUtility, submit);
-    return inputWrapper;
+    return new HorizontalLayout(stepText, stepUtility, button);
   }
 
-  private Component createPrepareList(){
-    prepareWrapper = new VerticalLayout();
-    prepareWrapper.setHeight("350px");
-    prepareTitle = new Label("Vorbereitung");
-
-    prepareGrid = new Grid<>(ConstructionStep.class, false);
-    prepareGrid.addClassName("construction-grid");
-    prepareGrid.getElement().getStyle().set("heigt", "200px");
-
-    prepareGrid.getColumns().forEach(col -> col.setAutoWidth(true));
-
-    prepareGrid.addColumn(new ComponentRenderer<>(this::createText))
-        .setHeader("Arbeitsmittel")
-        .setResizable(true);
-
-    prepareGrid.addColumn(new ComponentRenderer<>(this::createUtitity))
-        .setHeader("Betreibsmittel")
-        .setResizable(true);
-
-    prepareWrapper.add(prepareTitle, prepareGrid);
-    return prepareWrapper;
+  private void sendStep(ConstructionStep constructionStep) {
+    if (constructionStep == null || constructionSteps.contains(constructionStep))
+      return;
+    for (ConstructionStep actualStep : actualSteps) {
+      if (constructionStep.getText().equals(actualStep.getText())) {
+        constructionSteps.add(constructionStep);
+      }
+    }
+    this.refreshGrid();
   }
 
-  private Component createConstructionList(){
-    constructionWrapper = new VerticalLayout();
-    constructionWrapper.setHeight("350px");
-    constructionTitle = new Label("Montage");
-
-    constructionGrid = new Grid<>(ConstructionStep.class, false);
-    constructionGrid.addClassName("construction-grid");
-    constructionGrid.getElement().getStyle().set("heigt", "200px");
-
-    constructionGrid.getColumns().forEach(col -> col.setAutoWidth(true));
-
-    constructionGrid.addColumn(new ComponentRenderer<>(this::createText))
+  private Component setupGrid() {
+    gridWrapper = new VerticalLayout();
+    grid = new Grid<>(ConstructionStep.class, false);
+    grid.setAllRowsVisible(true);
+    grid.addColumn(new ComponentRenderer<>(this::createText))
         .setHeader("Arbeitsmittel")
         .setResizable(true);
-
-    constructionGrid.addColumn(new ComponentRenderer<>(this::createUtitity))
-        .setHeader("Betreibsmittel")
-        .setResizable(true);
-
-    constructionWrapper.add(constructionTitle, constructionGrid);
-    return constructionWrapper;
-  }
-
-  private Component createFinishList(){
-    finishWrapper = new VerticalLayout();
-    finishWrapper.setHeight("350px");
-    finishTitle = new Label("Finish");
-
-    finishGrid = new Grid<>(ConstructionStep.class, false);
-    finishGrid.addClassName("construction-grid");
-    finishGrid.getElement().getStyle().set("heigt", "200px");
-
-    finishGrid.getColumns().forEach(col -> col.setAutoWidth(true));
-
-    finishGrid.addColumn(new ComponentRenderer<>(this::createText))
+    grid.addColumn(new ComponentRenderer<>(this::createText))
         .setHeader("Arbeitsmittel")
         .setResizable(true);
+    grid.setItems(constructionSteps);
 
-    finishGrid.addColumn(new ComponentRenderer<>(this::createUtitity))
-        .setHeader("Betreibsmittel")
-        .setResizable(true);
+    hint = new Div();
+    hint.setText("Es wurden noch keine Schritte eingefügt");
+    hint.getStyle().set("padding", "var(--lumo-size-l)")
+        .set("text-align", "center").set("font-style", "italic")
+        .set("color", "var(--lumo-contrast-70pct)");
 
-    finishWrapper.add(finishTitle, finishGrid);
-    return finishWrapper;
+    gridWrapper.add(hint, grid);
+    return gridWrapper;
   }
 
   private Component createText(ConstructionStep constructionStep){
@@ -230,74 +181,31 @@ public class ConstructionView extends MainViewFrame {
     }
   }
 
-  /* Prepare */
-  void findAllPrepareSteps(){
-    Collection<ConstructionStep> content = new ArrayList<>();
-    content = executeFindAllPrepare();
-    fillPrepareGrid(content);
-  }
-
-  private void fillPrepareGrid(Collection<ConstructionStep> content) {
-    gridHandling(prepareGrid, content);
-  }
-
-  /* Constuction */
-  void findAllConstructionSteps(){
-    Collection<ConstructionStep> content = new ArrayList<>();
-    content = executeFindAllConstruction();
-    fillConstructionGrid(content);
-  }
-
-  private void fillConstructionGrid(Collection<ConstructionStep> content) {
-    gridHandling(constructionGrid, content);
-  }
-
-  /* Finish */
-  void findAllFinishSteps(){
-    Collection<ConstructionStep> content = new ArrayList<>();
-    content = executeFindAllFinish();
-    fillFinishGrid(content);
-  }
-
-  private void fillFinishGrid(Collection<ConstructionStep> content) {
-    gridHandling(finishGrid, content);
-  }
-
-  private void gridHandling(Grid<ConstructionStep> grid, Collection<ConstructionStep> content){
-    if(content.size()==0){
-      listDataProvider = DataProvider.ofCollection(new ArrayList<>());
-      grid.setDataProvider(listDataProvider);
+  private void refreshGrid() {
+    if (constructionSteps.size() > 0) {
+      grid.setVisible(true);
+      hint.setVisible(false);
+      grid.getDataProvider().refreshAll();
     } else {
-      listDataProvider = DataProvider.ofCollection(content);
-      grid.setDataProvider(listDataProvider);
+      grid.setVisible(false);
+      hint.setVisible(true);
     }
   }
 
-  private void refreshGrid() {
-    findAllPrepareSteps();
-    findAllConstructionSteps();
-    findAllFinishSteps();
+  private List<ConstructionStep> findGarmentsConstructionStep(){
+    actualSteps = new ArrayList<>();
+    actualSteps = constructionStepService.findByGarment(findGarmentForNow());
+    return actualSteps;
   }
 
-  private List<ConstructionStep> executeFindAllPrepare(){
-    List<ConstructionStep> prep = constructionStepService.findAllByStepType(StepType.PREPARE);
-    constructionSteps.addAll(prep);
-    return prep;
-  }
-
-  private List<ConstructionStep> executeFindAllConstruction(){
-    List<ConstructionStep> cons = constructionStepService.findAllByStepType(StepType.CONSTRUCTION);
-    constructionSteps.addAll(cons);
-    return cons;
-  }
-
-  private List<ConstructionStep> executeFindAllFinish(){
-    List<ConstructionStep> finish = constructionStepService.findAllByStepType(StepType.FINISH);
-    constructionSteps.addAll(finish);
-    return finish;
+  private Garment findGarmentForNow(){
+    return garmentService.findOne(1L);
   }
 
   private UserResult findUser(){
-    return resultService.findByUser(SecurityUtils.getCurrentLoggedUserId());
+    user = resultService.findByUser(SecurityUtils.getCurrentLoggedUserId());
+    user.setGarment(findGarmentForNow());
+    user.setRightAmount(0);
+    return user;
   }
 }
