@@ -36,6 +36,6 @@ public interface UserResultRepository extends JpaRepository<UserResult, Long> {
   @Query("select a from UserResult a WHERE a.id = :id")
   UserResult findOne(@Param("id") Long id);
 
-  @Query("select a from UserResult a WHERE a.user = :username")
-  UserResult findByUser(@Param("username")String username);
+  @Query("select a from UserResult a WHERE a.user = :user")
+  UserResult findByUser(@Param("user")User user);
 }

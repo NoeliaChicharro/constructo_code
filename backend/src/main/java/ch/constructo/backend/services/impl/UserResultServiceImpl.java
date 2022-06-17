@@ -86,5 +86,5 @@ public class UserResultServiceImpl implements UserResultService {
   }
 
   @Override
-  public UserResult findByUser(String username){return repository.findByUser(username);}
+  public UserResult findByUser(User user){return repository.findByUser(user);}
 }

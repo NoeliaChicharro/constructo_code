@@ -10,5 +10,5 @@ public interface UserResultService extends BaseDataService<UserResult> {
 
   UserResult findByPassed(boolean passed);
 
-  UserResult findByUser(String username);
+  UserResult findByUser(User user);
 }

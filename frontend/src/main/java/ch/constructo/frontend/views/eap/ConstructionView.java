@@ -2,9 +2,8 @@ package ch.constructo.frontend.views.eap;
 
 import ch.constructo.backend.data.entities.ConstructionStep;
 import ch.constructo.backend.data.entities.Garment;
+import ch.constructo.backend.data.entities.User;
 import ch.constructo.backend.data.entities.UserResult;
-import ch.constructo.backend.data.enums.GarmentType;
-import ch.constructo.backend.data.enums.StepType;
 import ch.constructo.backend.services.ConstructionStepService;
 import ch.constructo.backend.services.GarmentService;
 import ch.constructo.backend.services.UserResultService;
@@ -19,31 +18,26 @@ import ch.constructo.frontend.views.MainLayout;
 import ch.constructo.frontend.views.MainViewFrame;
 import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Label;
-import com.vaadin.flow.component.icon.Icon;
-import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.FlexLayout;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
-import com.vaadin.flow.data.provider.DataProvider;
 import com.vaadin.flow.data.provider.ListDataProvider;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import org.aspectj.weaver.ast.Not;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.security.access.annotation.Secured;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 @PageTitle("Epa | Tool")
@@ -75,7 +69,8 @@ public class ConstructionView extends MainViewFrame {
   private List<ConstructionStep> correctAnswers = new ArrayList<>();
   private List<ConstructionStep> actualSteps;
 
-  private UserResult user;
+  private UserResult userResult;
+  private User user;
 
   private static Div hint;
 
@@ -87,7 +82,8 @@ public class ConstructionView extends MainViewFrame {
     setViewContent(createContent());
     refreshGrid();
     findGarmentsConstructionStep();
-    //findUser();
+    findUser();
+    findUserResult();
   }
 
   private Component createContent(){
@@ -97,7 +93,7 @@ public class ConstructionView extends MainViewFrame {
     verticalLayout.add(setupForm());
     verticalLayout.add(setupGrid());
 
-    imageLayout.add(new Label("I am the image part"));
+    imageLayout.add(new Label(""));
 
     FlexBoxLayout content = new FlexBoxLayout(verticalLayout, imageLayout);
 
@@ -115,7 +111,9 @@ public class ConstructionView extends MainViewFrame {
     stepUtility = new TextField("Betriebsmittel");
 
     Button button = new Button("Send invite");
-    button.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+    button.getElement().getStyle().set("margin", "40px");
+    button.addThemeVariants(ButtonVariant.LUMO_CONTRAST);
+    button.addClickShortcut(Key.ENTER);
     button.addClickListener(e -> {
 
       if (stepUtility.getValue() == null){
@@ -129,6 +127,7 @@ public class ConstructionView extends MainViewFrame {
       sendStep(constructionStep);
       stepText.setValue("");
       stepUtility.setValue("");
+      stepText.focus();
     });
 
     return new HorizontalLayout(stepText, stepUtility, button);
@@ -141,6 +140,11 @@ public class ConstructionView extends MainViewFrame {
       if (constructionStep.getText().equals(actualStep.getText())) {
         setupImage(true);
         constructionSteps.add(constructionStep);
+        int amount = userResult.getRightAmount();
+        amount++;
+        userResult.setRightAmount(amount);
+        resultService.save(userResult);
+        Notification.show(userResult.getRightAmount().toString());
       }
     }
     this.refreshGrid();
@@ -159,6 +163,7 @@ public class ConstructionView extends MainViewFrame {
 
   private Component setupGrid() {
     gridWrapper = new VerticalLayout();
+    gridWrapper.setPadding(false);
     grid = new Grid<>(ConstructionStep.class, false);
     grid.setAllRowsVisible(true);
     grid.addColumn(new ComponentRenderer<>(this::createText))
@@ -217,10 +222,24 @@ public class ConstructionView extends MainViewFrame {
     return garmentService.findOne(1L);
   }
 
-  private UserResult findUser(){
-    user = resultService.findByUser(SecurityUtils.getCurrentLoggedUserId());
-    user.setGarment(findGarmentForNow());
-    user.setRightAmount(0);
+  private User findUser(){
+    user = userService.findByUsername(SecurityUtils.getCurrentLoggedUserId());
     return user;
+  }
+
+  private UserResult findUserResult(){
+    // @todo: check for garment two
+    userResult = resultService.findByUser(user);
+    if (userResult == null){
+      UserResult newUserResult = new UserResult();
+      newUserResult.setUser(findUser());
+      newUserResult.setPassed(false);
+      newUserResult.setGarment(findGarmentForNow());
+      newUserResult.setRightAmount(0);
+      userResult = resultService.save(newUserResult);
+      return userResult;
+    }
+
+    return userResult;
   }
 }

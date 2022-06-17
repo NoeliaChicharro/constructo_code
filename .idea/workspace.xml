@@ -13,9 +13,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/resources/webapp/sleeve.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/UserResultRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/UserResultRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/UserResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/UserResultService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/UserResultServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/UserResultServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/themes/constructo/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/frontend/themes/constructo/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +232,7 @@
       <workItem from="1651332842860" duration="5000" />
       <workItem from="1651332861342" duration="23002000" />
       <workItem from="1652945289768" duration="6099000" />
-      <workItem from="1653038179416" duration="61331000" />
+      <workItem from="1653038179416" duration="66027000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -413,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654847846364</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="insert Image if answer is correct">
+      <created>1654850934465</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1654850934465</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +464,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add all services" />
     <MESSAGE value="add security and basic login view" />
     <MESSAGE value="change security dependency location" />
     <MESSAGE value="some small changes to the view templates" />
@@ -472,7 +488,8 @@
     <MESSAGE value="find current user for userResult" />
     <MESSAGE value="some more tests" />
     <MESSAGE value="display user input in grid if answer is correct" />
-    <option name="LAST_COMMIT_MESSAGE" value="display user input in grid if answer is correct" />
+    <MESSAGE value="insert Image if answer is correct" />
+    <option name="LAST_COMMIT_MESSAGE" value="insert Image if answer is correct" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -501,6 +518,11 @@
           <url>file://$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config/base/DatabaseProperties.java</url>
           <line>37</line>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java</url>
+          <line>227</line>
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -24,7 +24,7 @@ import org.springframework.context.annotation.PropertySource;
 @Import( {ConstructoPersistenceConfig.class})
 @PropertySource(value = "classpath:/masterdata.properties")
 @NpmPackage(value = "@fontsource/barlow", version = "4.5.0")
-@Theme(value = "constructo", variant = Lumo.DARK)
+@Theme(value = "constructo", variant = Lumo.LIGHT)
 //@PWA(name = "Constructo", shortName = "Constructo", offlineResources = {})
 @NpmPackage(value = "line-awesome", version = "1.3.0")
 public class Application extends SpringBootServletInitializer implements AppShellConfigurator {
