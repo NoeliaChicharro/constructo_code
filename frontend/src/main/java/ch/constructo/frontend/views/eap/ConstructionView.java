@@ -19,6 +19,7 @@ import ch.constructo.frontend.views.MainViewFrame;
 import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Key;
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.grid.Grid;
@@ -45,6 +46,8 @@ import java.util.List;
 @Secured({"ROLE_ADMIN", "ROLE_USER"})
 public class ConstructionView extends MainViewFrame {
 
+  // @todo: if userresult is passed, show the grid already filled
+
   @Autowired
   private GarmentService garmentService;
 
@@ -63,6 +66,7 @@ public class ConstructionView extends MainViewFrame {
 
   private Grid grid;
   private VerticalLayout gridWrapper;
+  private HorizontalLayout buttonLayout;
   VerticalLayout imageLayout;
   private ListDataProvider<ConstructionStep> listDataProvider;
   private List<ConstructionStep> constructionSteps = new ArrayList<>();
@@ -92,6 +96,7 @@ public class ConstructionView extends MainViewFrame {
 
     verticalLayout.add(setupForm());
     verticalLayout.add(setupGrid());
+    verticalLayout.add(setupButtons());
 
     imageLayout.add(new Label(""));
 
@@ -138,22 +143,22 @@ public class ConstructionView extends MainViewFrame {
       return;
     for (ConstructionStep actualStep : actualSteps) {
       if (constructionStep.getText().equals(actualStep.getText())) {
-        setupImage(true);
+        setupImage(true, constructionStep.getText());
         constructionSteps.add(constructionStep);
         int amount = userResult.getRightAmount();
         amount++;
         userResult.setRightAmount(amount);
         resultService.save(userResult);
-        Notification.show(userResult.getRightAmount().toString());
       }
     }
     this.refreshGrid();
   }
 
-  private Component setupImage(boolean isCorrect){
+  private Component setupImage(boolean isCorrect, String text){
     Image image = new Image();
     if (isCorrect){
-      image.setSrc("images/sleeve.png");
+      imageLayout.removeAll();
+      image.setSrc("images/blouse/" + text  + ".png");
       image.setAlt("");
       imageLayout.add(image);
       return image;
@@ -199,6 +204,35 @@ public class ConstructionView extends MainViewFrame {
     if (getContentPane() != null) {
       getContentPane().getStyle().set("width", "100%");
     }
+  }
+
+  private Component setupButtons(){
+    buttonLayout = new HorizontalLayout();
+    buttonLayout.setPadding(false);
+
+    Button cancel = new Button("Abbrechen");
+    cancel.addThemeVariants(ButtonVariant.LUMO_CONTRAST);
+    cancel.addClickListener(e -> {
+      UI.getCurrent().navigate(EapView.class);
+    });
+
+    Button save = new Button("Speichern");
+    save.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+    save.addClickListener(e -> {
+      if (userResult != null){
+        int actualAmount = actualSteps.size();
+        int userAmount = userResult.getRightAmount();
+        int allowedDifference = 10;
+        if ((userAmount / actualAmount * 100) + allowedDifference >= 100){
+          userResult.setPassed(true);
+        } else {
+          userResult.setPassed(false);
+        }
+        resultService.save(userResult);
+      }
+    });
+    buttonLayout.add(cancel, save);
+    return buttonLayout;
   }
 
   private void refreshGrid() {
