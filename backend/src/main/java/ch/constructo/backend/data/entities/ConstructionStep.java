@@ -28,6 +28,8 @@ public class ConstructionStep extends AbstractEntity {
   @Size(max = 100)
   private String utilities;
 
+  private Integer sortorder;
+
   public ConstructionStep() {
   }
 
@@ -61,5 +63,13 @@ public class ConstructionStep extends AbstractEntity {
 
   public void setUtilities(String utilities) {
     this.utilities = utilities;
+  }
+
+  public Integer getSortorder() {
+    return sortorder;
+  }
+
+  public void setSortorder(Integer sortorder) {
+    this.sortorder = sortorder;
   }
 }

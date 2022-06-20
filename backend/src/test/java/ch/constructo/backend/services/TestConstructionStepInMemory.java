@@ -97,6 +97,7 @@ public class TestConstructionStepInMemory {
   public ConstructionStep createConstructionStep(){
     ConstructionStep constructionStep = new ConstructionStep();
     constructionStep.setStepType(StepType.PREPARE);
+    constructionStep.setSortorder(1);
     constructionStep.setText("Double fabric");
     constructionStep.setGarment(createGarment());
 
