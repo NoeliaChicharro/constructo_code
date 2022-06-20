@@ -13,13 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/sql/V1.6__alter_table.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/sql/V1.6__insert_ConstructionStep.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sql/V1.6__insert_ConstructionStep.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/ConstructionStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/ConstructionStep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/frontend/generated/vaadin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/frontend/generated/vaadin.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/generated/vaadin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/generated/vaadin.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vaadin/vaadin.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vaadin/vaadin.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -228,7 +225,7 @@
       <workItem from="1651332842860" duration="5000" />
       <workItem from="1651332861342" duration="23002000" />
       <workItem from="1652945289768" duration="6099000" />
-      <workItem from="1653038179416" duration="71025000" />
+      <workItem from="1653038179416" duration="75355000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -440,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655454379806</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="alter table ConstructionStep">
+      <created>1655725449139</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1655725449139</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,7 +478,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="some small changes to the view templates" />
     <MESSAGE value="review Day" />
     <MESSAGE value="Data Config" />
     <MESSAGE value="trying to get config right" />
@@ -499,7 +502,8 @@
     <MESSAGE value="insert Image if answer is correct" />
     <MESSAGE value="find right user and store the correct answer amount" />
     <MESSAGE value="save userresult" />
-    <option name="LAST_COMMIT_MESSAGE" value="save userresult" />
+    <MESSAGE value="alter table ConstructionStep" />
+    <option name="LAST_COMMIT_MESSAGE" value="alter table ConstructionStep" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -528,11 +532,6 @@
           <url>file://$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config/base/DatabaseProperties.java</url>
           <line>37</line>
           <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java</url>
-          <line>230</line>
-          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

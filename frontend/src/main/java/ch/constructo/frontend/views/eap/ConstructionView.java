@@ -143,6 +143,33 @@ public class ConstructionView extends MainViewFrame {
       return;
     for (ConstructionStep actualStep : actualSteps) {
       if (constructionStep.getText().equals(actualStep.getText())) {
+/*        if (!constructionSteps.isEmpty()){
+          ConstructionStep step = constructionSteps.get(constructionSteps.size()-1);
+          int order = step.getSortorder();
+          int difference = constructionStep.getSortorder() - order;
+          if (difference == 1){
+            setupImage(true, constructionStep.getText());
+            constructionSteps.add(constructionStep);
+            int amount = userResult.getRightAmount();
+            amount++;
+            userResult.setRightAmount(amount);
+            resultService.save(userResult);
+          } else {
+            Notification.show("Reihenfolge stimmt nicht!");
+          }
+        }
+        if (constructionSteps.isEmpty()){
+          if (constructionStep.getSortorder() == 1){
+            setupImage(true, constructionStep.getText());
+            constructionSteps.add(constructionStep);
+            int amount = userResult.getRightAmount();
+            amount++;
+            userResult.setRightAmount(amount);
+            resultService.save(userResult);
+          }
+        } else {
+          Notification.show("Reihenfolge stimmt nicht!");
+        }*/
         setupImage(true, constructionStep.getText());
         constructionSteps.add(constructionStep);
         int amount = userResult.getRightAmount();
