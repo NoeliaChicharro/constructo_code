@@ -80,6 +80,7 @@ ch/constructo/frontend/ui/util/LumoStyles$IconSize.class
 ch/constructo/frontend/ui/util/Shadow.class
 ch/constructo/frontend/ui/util/LumoStyles$Space.class
 ch/constructo/frontend/ui/exceptions/AccessDeniedExceptionHandler.class
+ch/constructo/frontend/views/teachers/CreateEap.class
 ch/constructo/frontend/views/MainViewFrame.class
 ch/constructo/frontend/ui/util/LumoStyles$Spacing$Top.class
 ch/constructo/frontend/ui/util/LumoStyles$Spacing$Horizontal.class

@@ -1,8 +1,13 @@
 package ch.constructo.frontend.views;
 
+import ch.constructo.backend.data.entities.User;
+import ch.constructo.backend.data.enums.Role;
+import ch.constructo.backend.services.UserService;
+import ch.constructo.frontend.security.SecurityUtils;
 import ch.constructo.frontend.ui.components.navigation.AppBar;
 import ch.constructo.frontend.views.dashboard.DashboardView;
 import ch.constructo.frontend.views.eap.EapView;
+import ch.constructo.frontend.views.teachers.CreateEap;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.applayout.AppLayout;
@@ -12,6 +17,8 @@ import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.RouterLink;
+import org.apache.catalina.security.SecurityUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Optional;
 
@@ -21,6 +28,9 @@ import java.util.Optional;
 public class MainLayout extends AppLayout {
 
   private AppBar appBar;
+
+  @Autowired
+  private UserService userService;
 
   /**
    * A simple navigation item component, based on ListItem element.
@@ -64,7 +74,8 @@ public class MainLayout extends AppLayout {
 
   private H1 viewTitle;
 
-  public MainLayout() {
+  public MainLayout(UserService userService) {
+    this.userService = userService;
     setPrimarySection(Section.DRAWER);
     addToNavbar(true, createHeaderContent());
     addToDrawer(createDrawerContent());
@@ -114,10 +125,17 @@ public class MainLayout extends AppLayout {
   }
 
   private MenuItemInfo[] createMenuItems() {
+    User user = userService.findByUsername(SecurityUtils.getCurrentLoggedUserId());
+    if (user.getRole() == Role.ADMIN){
+      return new MenuItemInfo[]{
+          new MenuItemInfo("Dashboard", "la la-home", DashboardView.class),
+          new MenuItemInfo("Eap", "la la-file", EapView.class),
+          new MenuItemInfo("Eap Erstellen", "la la-globe", CreateEap.class)
+      };
+    }
     return new MenuItemInfo[]{
-        new MenuItemInfo("Dashboard", "la la-home", DashboardView.class), //
-        new MenuItemInfo("Eap", "la la-file", EapView.class), //
-
+        new MenuItemInfo("Dashboard", "la la-home", DashboardView.class),
+        new MenuItemInfo("Eap", "la la-file", EapView.class),
     };
   }
 
