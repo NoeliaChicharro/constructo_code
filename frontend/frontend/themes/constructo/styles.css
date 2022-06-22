@@ -11,15 +11,15 @@
       --lumo-shade-70pct: rgba(33, 33, 33, 0.7);
       --lumo-shade-80pct: rgba(33, 33, 33, 0.8);
       --lumo-shade-90pct: rgba(33, 33, 33, 0.9);
-      --lumo-primary-color-50pct: rgba(154, 5, 235, 0.5);
+      --lumo-primary-color-50pct: rgba(40, 5, 235, 0.5);
       --lumo-primary-color-10pct: rgba(139, 5, 235, 0.1);
       --lumo-error-color-50pct: rgba(231, 24, 24, 0.5);
       --lumo-error-color-10pct: rgba(231, 24, 24, 0.1);
       --lumo-success-color-50pct: rgba(62, 229, 170, 0.5);
       --lumo-success-color-10pct: rgba(62, 229, 170, 0.1);
       --lumo-shade: hsl(0, 0%, 13%);
-      --lumo-primary-color: hsl(282, 96%, 47%);
-      --lumo-primary-text-color: hsl(289, 100%, 42%);
+      --lumo-primary-color: hsla(249, 96%, 47%, 0.5);
+      --lumo-primary-text-color: hsla(249, 96%, 47%, 0.5);
       --lumo-error-color: hsl(0, 81%, 50%);
       --lumo-error-text-color: hsl(0, 86%, 45%);
       --lumo-success-color: hsl(159, 76%, 57%);

@@ -15,6 +15,7 @@
         "@vaadin/grid/src/vaadin-grid-tree-toggle.js",
         "@vaadin/details/src/vaadin-details.js",
         "@vaadin/dialog/src/vaadin-dialog.js",
+        "@vaadin/notification/src/vaadin-notification.js",
         "@vaadin/email-field/src/vaadin-email-field.js",
         "@vaadin/list-box/src/vaadin-list-box.js",
         "@vaadin/form-layout/src/vaadin-form-layout.js",

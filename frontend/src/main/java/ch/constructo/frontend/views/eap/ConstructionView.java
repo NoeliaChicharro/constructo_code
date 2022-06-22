@@ -15,6 +15,7 @@ import ch.constructo.frontend.ui.layout.Horizontal;
 import ch.constructo.frontend.ui.layout.Top;
 import ch.constructo.frontend.ui.util.BoxSizing;
 import ch.constructo.frontend.views.MainLayout;
+import ch.constructo.frontend.views.MainLayout.MenuItemInfo;
 import ch.constructo.frontend.views.MainViewFrame;
 import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.Component;
@@ -115,7 +116,8 @@ public class ConstructionView extends MainViewFrame {
     stepText = new TextField("Arbeitsmittel");
     stepUtility = new TextField("Betriebsmittel");
 
-    Button button = new Button("Send invite");
+    Button button = new Button(new MenuItemInfo.LineAwesomeIcon("la la-arrow-right"));
+    button.getElement().getStyle().set("padding", "5px 5px 5px 15px");
     button.getElement().getStyle().set("margin", "40px");
     button.addThemeVariants(ButtonVariant.LUMO_CONTRAST);
     button.addClickShortcut(Key.ENTER);
@@ -252,8 +254,10 @@ public class ConstructionView extends MainViewFrame {
         int allowedDifference = 10;
         if ((userAmount / actualAmount * 100) + allowedDifference >= 100){
           userResult.setPassed(true);
+          Notification.show("Du hast bestanden");
         } else {
           userResult.setPassed(false);
+          Notification.show("Leider nicht bestanden");
         }
         resultService.save(userResult);
       }

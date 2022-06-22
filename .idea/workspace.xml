@@ -13,10 +13,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/dashboard/ladies.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/dashboard/DashboardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/dashboard/DashboardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/themes/constructo/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/frontend/themes/constructo/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +224,7 @@
       <workItem from="1651332842860" duration="5000" />
       <workItem from="1651332861342" duration="23002000" />
       <workItem from="1652945289768" duration="6099000" />
-      <workItem from="1653038179416" duration="78330000" />
+      <workItem from="1653038179416" duration="79882000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -449,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655730322767</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="finalize dashboard">
+      <created>1655904751615</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1655904751615</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +491,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Data Config" />
     <MESSAGE value="trying to get config right" />
     <MESSAGE value="review" />
     <MESSAGE value="unit tests for services" />
@@ -508,7 +515,8 @@
     <MESSAGE value="save userresult" />
     <MESSAGE value="alter table ConstructionStep" />
     <MESSAGE value="add functionality for sortOrder" />
-    <option name="LAST_COMMIT_MESSAGE" value="add functionality for sortOrder" />
+    <MESSAGE value="finalize dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalize dashboard" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
