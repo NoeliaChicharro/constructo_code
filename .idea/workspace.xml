@@ -13,12 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/dashboard/ladies.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/frontend/generated/vaadin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/frontend/generated/vaadin.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/generated/vaadin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/generated/vaadin.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/dashboard/DashboardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/dashboard/DashboardView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +88,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/dashboard" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -103,11 +101,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/dashboard" />
       <recent name="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images" />
       <recent name="$PROJECT_DIR$/frontend/src/main/resources" />
       <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/icons" />
-      <recent name="$PROJECT_DIR$/frontend/frontend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/blouse" />
@@ -225,7 +223,7 @@
       <workItem from="1651332842860" duration="5000" />
       <workItem from="1651332861342" duration="23002000" />
       <workItem from="1652945289768" duration="6099000" />
-      <workItem from="1653038179416" duration="75355000" />
+      <workItem from="1653038179416" duration="78330000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -444,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655725449139</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="add functionality for sortOrder">
+      <created>1655730322767</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1655730322767</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,7 +483,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="review Day" />
     <MESSAGE value="Data Config" />
     <MESSAGE value="trying to get config right" />
     <MESSAGE value="review" />
@@ -503,7 +507,8 @@
     <MESSAGE value="find right user and store the correct answer amount" />
     <MESSAGE value="save userresult" />
     <MESSAGE value="alter table ConstructionStep" />
-    <option name="LAST_COMMIT_MESSAGE" value="alter table ConstructionStep" />
+    <MESSAGE value="add functionality for sortOrder" />
+    <option name="LAST_COMMIT_MESSAGE" value="add functionality for sortOrder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

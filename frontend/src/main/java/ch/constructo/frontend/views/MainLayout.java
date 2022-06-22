@@ -114,8 +114,8 @@ public class MainLayout extends AppLayout {
   }
 
   private MenuItemInfo[] createMenuItems() {
-    return new MenuItemInfo[]{ //
-        new MenuItemInfo("Hello World", "la la-globe", DashboardView.class), //
+    return new MenuItemInfo[]{
+        new MenuItemInfo("Dashboard", "la la-home", DashboardView.class), //
         new MenuItemInfo("Eap", "la la-file", EapView.class), //
 
     };
