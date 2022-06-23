@@ -46,8 +46,6 @@
         "@vaadin/integer-field/src/vaadin-integer-field.js",
         "@vaadin/form-layout/src/vaadin-form-item.js",
         "@vaadin/login/src/vaadin-login-overlay.js",
-        "@vaadin/icons/vaadin-iconset.js",
-        "@vaadin/icon/vaadin-icon.js",
         "@vaadin/split-layout/src/vaadin-split-layout.js",
         "./vaadin-big-decimal-field.js",
         "@vaadin/custom-field/src/vaadin-custom-field.js",

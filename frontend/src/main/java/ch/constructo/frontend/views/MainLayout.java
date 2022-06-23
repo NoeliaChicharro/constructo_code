@@ -8,6 +8,7 @@ import ch.constructo.frontend.ui.components.navigation.AppBar;
 import ch.constructo.frontend.views.dashboard.DashboardView;
 import ch.constructo.frontend.views.eap.EapView;
 import ch.constructo.frontend.views.teachers.CreateEap;
+import ch.constructo.frontend.views.teachers.StudentListView;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.applayout.AppLayout;
@@ -17,7 +18,6 @@ import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.RouterLink;
-import org.apache.catalina.security.SecurityUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Optional;
@@ -129,6 +129,7 @@ public class MainLayout extends AppLayout {
     if (user.getRole() == Role.ADMIN){
       return new MenuItemInfo[]{
           new MenuItemInfo("Dashboard", "la la-home", DashboardView.class),
+          new MenuItemInfo("Studenten Liste", "la la-user", StudentListView.class),
           new MenuItemInfo("Eap", "la la-file", EapView.class),
           new MenuItemInfo("Eap Erstellen", "la la-globe", CreateEap.class)
       };

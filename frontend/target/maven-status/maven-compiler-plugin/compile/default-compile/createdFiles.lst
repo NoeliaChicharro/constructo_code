@@ -24,6 +24,7 @@ ch/constructo/frontend/ui/util/LumoStyles$Spacing$Bottom.class
 ch/constructo/frontend/ui/util/LumoStyles$Color$Error.class
 ch/constructo/frontend/ui/util/LumoStyles$Margin$Responsive.class
 ch/constructo/frontend/ui/util/LumoStyles$BorderRadius.class
+ch/constructo/frontend/views/teachers/StudentListView.class
 ch/constructo/frontend/ui/util/LumoStyles$Padding$Left.class
 ch/constructo/frontend/security/UserDetailsImpl$2.class
 ch/constructo/frontend/ui/util/LumoStyles$Size.class

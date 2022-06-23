@@ -1,7 +1,6 @@
 ch/constructo/backend/config/DbConfig.class
 ch/constructo/backend/services/TestConstructionStepInMemory.class
 ch/constructo/backend/services/TestUserResultInMemory.class
-ch/constructo/backend/services/TestClassInMemory.class
 ch/constructo/backend/services/TestUserInMemory.class
 ch/constructo/backend/config/TestDbConfig.class
 ch/constructo/backend/services/TestGarmentInMemory.class

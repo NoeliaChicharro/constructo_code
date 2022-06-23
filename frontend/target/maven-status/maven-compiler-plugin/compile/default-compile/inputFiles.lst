@@ -31,5 +31,6 @@
 /Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java
 /Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/java/ch/constructo/frontend/security/UserSession.java
 /Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/java/ch/constructo/frontend/ui/util/FontSize.java
+/Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java
 /Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/java/ch/constructo/frontend/views/login/LoginView.java
 /Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/java/ch/constructo/frontend/security/ConstructoAuthenticationProvidor.java
