@@ -12,24 +12,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java" afterDir="false" />
+    <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="create dialog to add new student">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/sql/V2.0__create_class_table.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/Class.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/ClassRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/ClassService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/ClassServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/db/initial-master-database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/db/initial-master-database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +223,7 @@
       <workItem from="1651332842860" duration="5000" />
       <workItem from="1651332861342" duration="23002000" />
       <workItem from="1652945289768" duration="6099000" />
-      <workItem from="1653038179416" duration="88993000" />
+      <workItem from="1653038179416" duration="92737000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -492,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655987867992</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="create student list view with filter function">
+      <created>1655992064771</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1655992064771</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +518,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="project ist startable" />
     <MESSAGE value="create view for eap" />
     <MESSAGE value="add basic component to overview" />
     <MESSAGE value="framework" />
@@ -551,7 +542,8 @@
     <MESSAGE value="add some design changes" />
     <MESSAGE value="add content for admin only&#10;check if user is admin or student" />
     <MESSAGE value="add class table to db&#10;&#10;create entity with repo and service for class" />
-    <option name="LAST_COMMIT_MESSAGE" value="add class table to db&#10;&#10;create entity with repo and service for class" />
+    <MESSAGE value="create student list view with filter function" />
+    <option name="LAST_COMMIT_MESSAGE" value="create student list view with filter function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -580,11 +572,6 @@
           <url>file://$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config/base/DatabaseProperties.java</url>
           <line>37</line>
           <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/UserServiceImpl.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
