@@ -1,11 +1,9 @@
 package ch.constructo.backend.data.entities;
 
 import ch.constructo.backend.data.enums.Role;
+import org.hibernate.mapping.ToOne;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;

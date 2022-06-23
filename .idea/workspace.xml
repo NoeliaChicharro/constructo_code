@@ -13,14 +13,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/CreateEap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/sql/V1.8__insert_student.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/sql/V2.0__create_class_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/Class.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/ClassRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/ClassService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/ClassServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/derby.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sql/V1.3__create_construction_step_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/sql/V1.3__create_construction_step_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/sql/V1.6__alter_table.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/db/initial-master-database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/db/initial-master-database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +43,8 @@
       <list>
         <option value="HTML File" />
         <option value="AnnotationType" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -119,11 +127,27 @@
       <recent name="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/config" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ch.constructo.backend.services" />
       <recent name="ch.constructo.frontend.views" />
       <recent name="ch.constructo.backend.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Application">
+  <component name="RunManager" selected="JUnit.TestClassInMemory">
+    <configuration name="TestClassInMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch.constructo.backend.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch.constructo.backend.services" />
+      <option name="MAIN_CLASS_NAME" value="ch.constructo.backend.services.TestClassInMemory" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestGarmentInMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
@@ -170,21 +194,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestUserResultInMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ch.constructo.backend.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ch.constructo.backend.services" />
-      <option name="MAIN_CLASS_NAME" value="ch.constructo.backend.services.TestUserResultInMemory" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="frontend" />
       <extension name="coverage">
@@ -199,19 +208,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestUserResultInMemory" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="JUnit.TestUserInMemory.createUser" />
       <item itemvalue="JUnit.TestUserInMemory" />
       <item itemvalue="JUnit.TestGarmentInMemory" />
+      <item itemvalue="JUnit.TestClassInMemory" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestClassInMemory" />
         <item itemvalue="Spring Boot.Application" />
         <item itemvalue="JUnit.TestUserInMemory" />
         <item itemvalue="JUnit.TestGarmentInMemory" />
         <item itemvalue="JUnit.TestUserInMemory.createUser" />
-        <item itemvalue="JUnit.TestUserResultInMemory" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +236,7 @@
       <workItem from="1651332842860" duration="5000" />
       <workItem from="1651332861342" duration="23002000" />
       <workItem from="1652945289768" duration="6099000" />
-      <workItem from="1653038179416" duration="80614000" />
+      <workItem from="1653038179416" duration="85085000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -467,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655906368543</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="add content for admin only&#10;check if user is admin or student">
+      <created>1655907207547</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1655907207547</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +517,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="review" />
     <MESSAGE value="unit tests for services" />
     <MESSAGE value="project ist startable" />
     <MESSAGE value="create view for eap" />
@@ -526,7 +541,8 @@
     <MESSAGE value="add functionality for sortOrder" />
     <MESSAGE value="finalize dashboard" />
     <MESSAGE value="add some design changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="add some design changes" />
+    <MESSAGE value="add content for admin only&#10;check if user is admin or student" />
+    <option name="LAST_COMMIT_MESSAGE" value="add content for admin only&#10;check if user is admin or student" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -555,6 +571,11 @@
           <url>file://$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config/base/DatabaseProperties.java</url>
           <line>37</line>
           <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/UserServiceImpl.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,5 +1,6 @@
 ch/constructo/backend/data/enums/StepType.class
 ch/constructo/backend/data/config/base/DataSourcAdapter.class
+ch/constructo/backend/data/entities/Class.class
 ch/constructo/backend/services/impl/GarmentServiceImpl.class
 ch/constructo/backend/data/enums/Role.class
 ch/constructo/backend/services/impl/ConstructionStepServiceImpl.class
@@ -24,9 +25,12 @@ ch/constructo/backend/data/entities/Garment.class
 ch/constructo/backend/data/config/base/DataSourceMapDescriptor.class
 ch/constructo/backend/data/config/base/JpaProperties.class
 ch/constructo/backend/data/entities/ConstructionStep.class
+ch/constructo/backend/data/repositories/ClassRepository.class
+ch/constructo/backend/services/ClassService.class
 ch/constructo/backend/data/entities/User.class
 ch/constructo/backend/services/UserService.class
 ch/constructo/backend/services/ConstructionStepService.class
+ch/constructo/backend/services/impl/ClassServiceImpl.class
 ch/constructo/backend/services/BaseDataService.class
 ch/constructo/backend/data/repositories/UserRepository.class
 ch/constructo/backend/data/config/ConstructoPersistenceConfig.class
