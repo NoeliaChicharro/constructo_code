@@ -12,9 +12,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="create dialog to add new student">
+    <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/sql/V.1.10__insert_collar.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/sql/V1.9__insert_sleeve.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/blouse/Endkontrolle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/blouse/Fixierstepp .png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/blouse/Kragen stürzen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/blouse/Kragen verarbeiten.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/blouse/Sandwitchverfahren.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/blouse/Unter und Oberkragen zusammen steppen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/blouse/Ärmel einsteppen.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/derby.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/db/initial-master-database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/db/initial-master-database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/META-INF/VAADIN/config/flow-build-info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +71,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
   </component>
@@ -64,7 +84,7 @@
     <option name="selectedIndex" value="2" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="ProjectId" id="28TGW688AG4mExkwEY32cTypELi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -75,28 +95,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/dashboard" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;7dfce86618caec0fb77ddb78de2cfa8b&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/dashboard" />
@@ -135,6 +145,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestConstructionStepInMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ch.constructo.backend.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ch.constructo.backend.services" />
+      <option name="MAIN_CLASS_NAME" value="ch.constructo.backend.services.TestConstructionStepInMemory" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestGarmentInMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
@@ -150,64 +175,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestUserInMemory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ch.constructo.backend in backend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ch.constructo.backend.services.*" />
+          <option name="PATTERN" value="ch.constructo.backend.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ch.constructo.backend.services" />
-      <option name="MAIN_CLASS_NAME" value="ch.constructo.backend.services.TestUserInMemory" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestUserInMemory.createUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ch.constructo.backend.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ch.constructo.backend.services" />
-      <option name="MAIN_CLASS_NAME" value="ch.constructo.backend.services.TestUserInMemory" />
-      <option name="METHOD_NAME" value="createUser" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="ch.constructo.backend" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="frontend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ch.constructo.frontend.Application" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ch.constructo.frontend.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ch.constructo.frontend.Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.Application" />
-      <item itemvalue="JUnit.TestUserInMemory.createUser" />
-      <item itemvalue="JUnit.TestUserInMemory" />
+      <item itemvalue="JUnit.TestConstructionStepInMemory" />
+      <item itemvalue="JUnit.ch.constructo.backend in backend" />
       <item itemvalue="JUnit.TestGarmentInMemory" />
       <item itemvalue="JUnit.TestClassInMemory" />
+      <item itemvalue="Spring Boot.Application" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Application" />
-        <item itemvalue="JUnit.TestClassInMemory" />
-        <item itemvalue="JUnit.TestUserInMemory" />
         <item itemvalue="JUnit.TestGarmentInMemory" />
-        <item itemvalue="JUnit.TestUserInMemory.createUser" />
+        <item itemvalue="JUnit.TestConstructionStepInMemory" />
+        <item itemvalue="JUnit.ch.constructo.backend in backend" />
+        <item itemvalue="JUnit.TestClassInMemory" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +231,13 @@
       <workItem from="1651332842860" duration="5000" />
       <workItem from="1651332861342" duration="23002000" />
       <workItem from="1652945289768" duration="6099000" />
-      <workItem from="1653038179416" duration="92737000" />
+      <workItem from="1653038179416" duration="97640000" />
+      <workItem from="1656061702384" duration="1645000" />
+      <workItem from="1656063729584" duration="1674000" />
+      <workItem from="1656318246575" duration="10973000" />
+      <workItem from="1656332815784" duration="24000" />
+      <workItem from="1656334073144" duration="83000" />
+      <workItem from="1656334313014" duration="4400000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -484,11 +498,23 @@
       <option name="project" value="LOCAL" />
       <updated>1655992064771</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="create dialog to add new student&#10;&#10;add column in grid to delete user">
+      <created>1655995792187</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1655995792187</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.seleniumhq.selenium:selenium-java" />
+    <option featureType="dependencySupport" implementationName="java:javax.persistence:javax.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -512,13 +538,11 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="create view for eap" />
     <MESSAGE value="add basic component to overview" />
     <MESSAGE value="framework" />
     <MESSAGE value="* make grid selectable&#10;* provide right entity in selection" />
@@ -543,16 +567,12 @@
     <MESSAGE value="add content for admin only&#10;check if user is admin or student" />
     <MESSAGE value="add class table to db&#10;&#10;create entity with repo and service for class" />
     <MESSAGE value="create student list view with filter function" />
-    <option name="LAST_COMMIT_MESSAGE" value="create student list view with filter function" />
+    <MESSAGE value="create dialog to add new student&#10;&#10;add column in grid to delete user" />
+    <option name="LAST_COMMIT_MESSAGE" value="create dialog to add new student&#10;&#10;add column in grid to delete user" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config/base/BasePersistenceConfig.java</url>
-          <line>118</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/test/ConstructoPersistenceConfig.java</url>
           <line>154</line>

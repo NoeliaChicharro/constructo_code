@@ -47,8 +47,6 @@ import java.util.List;
 @Secured({"ROLE_ADMIN", "ROLE_USER"})
 public class ConstructionView extends MainViewFrame {
 
-  // @todo: if userresult is passed, show the grid already filled
-
   @Autowired
   private GarmentService garmentService;
 
@@ -64,6 +62,9 @@ public class ConstructionView extends MainViewFrame {
   /* Input */
   private TextField stepText;
   private TextField stepUtility;
+  private Button send;
+  private Button cancel;
+  private Button save;
 
   private Grid grid;
   private VerticalLayout gridWrapper;
@@ -84,11 +85,12 @@ public class ConstructionView extends MainViewFrame {
   protected void onAttach(AttachEvent attachEvent) {
     super.onAttach(attachEvent);
     initAppBar();
-    setViewContent(createContent());
-    refreshGrid();
     findGarmentsConstructionStep();
     findUser();
     findUserResult();
+    setViewContent(createContent());
+    refreshGrid();
+    buttonsNotEnabled();
   }
 
   private Component createContent(){
@@ -98,8 +100,6 @@ public class ConstructionView extends MainViewFrame {
     verticalLayout.add(setupForm());
     verticalLayout.add(setupGrid());
     verticalLayout.add(setupButtons());
-
-    imageLayout.add(new Label(""));
 
     FlexBoxLayout content = new FlexBoxLayout(verticalLayout, imageLayout);
 
@@ -116,12 +116,12 @@ public class ConstructionView extends MainViewFrame {
     stepText = new TextField("Arbeitsmittel");
     stepUtility = new TextField("Betriebsmittel");
 
-    Button button = new Button(new MenuItemInfo.LineAwesomeIcon("la la-arrow-right"));
-    button.getElement().getStyle().set("padding", "5px 5px 5px 15px");
-    button.getElement().getStyle().set("margin", "40px");
-    button.addThemeVariants(ButtonVariant.LUMO_CONTRAST);
-    button.addClickShortcut(Key.ENTER);
-    button.addClickListener(e -> {
+    send = new Button(new MenuItemInfo.LineAwesomeIcon("la la-arrow-right"));
+    send.getElement().getStyle().set("padding", "5px 5px 5px 15px");
+    send.getElement().getStyle().set("margin", "40px");
+    send.addThemeVariants(ButtonVariant.LUMO_CONTRAST);
+    send.addClickShortcut(Key.ENTER);
+    send.addClickListener(e -> {
 
       if (stepUtility.getValue() == null){
         stepUtility.setValue("");
@@ -137,7 +137,7 @@ public class ConstructionView extends MainViewFrame {
       stepText.focus();
     });
 
-    return new HorizontalLayout(stepText, stepUtility, button);
+    return new HorizontalLayout(stepText, stepUtility, send);
   }
 
   private void sendStep(ConstructionStep constructionStep) {
@@ -145,54 +145,44 @@ public class ConstructionView extends MainViewFrame {
       return;
     for (ConstructionStep actualStep : actualSteps) {
       if (constructionStep.getText().equals(actualStep.getText())) {
-/*        if (!constructionSteps.isEmpty()){
+        if (!constructionSteps.isEmpty()){
           ConstructionStep step = constructionSteps.get(constructionSteps.size()-1);
           int order = step.getSortorder();
-          int difference = constructionStep.getSortorder() - order;
+          int difference = actualStep.getSortorder() - order;
           if (difference == 1){
-            setupImage(true, constructionStep.getText());
-            constructionSteps.add(constructionStep);
-            int amount = userResult.getRightAmount();
-            amount++;
-            userResult.setRightAmount(amount);
-            resultService.save(userResult);
+           saveStep(actualStep, constructionStep);
           } else {
             Notification.show("Reihenfolge stimmt nicht!");
           }
         }
         if (constructionSteps.isEmpty()){
-          if (constructionStep.getSortorder() == 1){
-            setupImage(true, constructionStep.getText());
-            constructionSteps.add(constructionStep);
-            int amount = userResult.getRightAmount();
-            amount++;
-            userResult.setRightAmount(amount);
-            resultService.save(userResult);
+          if (actualStep.getSortorder() == 1){
+           saveStep(actualStep, constructionStep);
           }
-        } else {
-          Notification.show("Reihenfolge stimmt nicht!");
-        }*/
-        setupImage(true, constructionStep.getText());
-        constructionSteps.add(constructionStep);
-        int amount = userResult.getRightAmount();
-        amount++;
-        userResult.setRightAmount(amount);
-        resultService.save(userResult);
+        }
       }
     }
     this.refreshGrid();
   }
 
-  private Component setupImage(boolean isCorrect, String text){
+  private void saveStep(ConstructionStep actualStep, ConstructionStep constructionStep){
+    setupImage(true, constructionStep.getText());
+    constructionStep.setSortorder(actualStep.getSortorder());
+    constructionSteps.add(constructionStep);
+    int amount = userResult.getRightAmount();
+    amount++;
+    userResult.setRightAmount(amount);
+    resultService.save(userResult);
+  }
+
+  private void setupImage(boolean isCorrect, String text){
     Image image = new Image();
     if (isCorrect){
       imageLayout.removeAll();
       image.setSrc("images/blouse/" + text  + ".png");
       image.setAlt("");
       imageLayout.add(image);
-      return image;
     }
-    return null;
   }
 
   private Component setupGrid() {
@@ -239,13 +229,13 @@ public class ConstructionView extends MainViewFrame {
     buttonLayout = new HorizontalLayout();
     buttonLayout.setPadding(false);
 
-    Button cancel = new Button("Abbrechen");
+    cancel = new Button("Abbrechen");
     cancel.addThemeVariants(ButtonVariant.LUMO_CONTRAST);
     cancel.addClickListener(e -> {
       UI.getCurrent().navigate(EapView.class);
     });
 
-    Button save = new Button("Speichern");
+    save = new Button("Speichern");
     save.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
     save.addClickListener(e -> {
       if (userResult != null){
@@ -266,7 +256,25 @@ public class ConstructionView extends MainViewFrame {
     return buttonLayout;
   }
 
+  private void buttonsNotEnabled(){
+    if (userResult.getPassed()){
+      send.setEnabled(false);
+      save.setEnabled(false);
+    }
+  }
+
   private void refreshGrid() {
+    if (userResult.getPassed()){
+      constructionSteps.addAll(actualSteps);
+      Image image = new Image();
+      image.setSrc("images/blouse/Endkontrolle.png");
+      imageLayout.add(image);
+      stepText.setEnabled(false);
+      stepUtility.setEnabled(false);
+    } else {
+      userResult.setRightAmount(0);
+    }
+
     if (constructionSteps.size() > 0) {
       grid.setVisible(true);
       hint.setVisible(false);
@@ -277,10 +285,9 @@ public class ConstructionView extends MainViewFrame {
     }
   }
 
-  private List<ConstructionStep> findGarmentsConstructionStep(){
+  private void findGarmentsConstructionStep(){
     actualSteps = new ArrayList<>();
     actualSteps = constructionStepService.findByGarment(findGarmentForNow());
-    return actualSteps;
   }
 
   private Garment findGarmentForNow(){
@@ -292,7 +299,7 @@ public class ConstructionView extends MainViewFrame {
     return user;
   }
 
-  private UserResult findUserResult(){
+  private void findUserResult(){
     // @todo: check for garment two
     userResult = resultService.findByUser(user);
     if (userResult == null){
@@ -302,9 +309,6 @@ public class ConstructionView extends MainViewFrame {
       newUserResult.setGarment(findGarmentForNow());
       newUserResult.setRightAmount(0);
       userResult = resultService.save(newUserResult);
-      return userResult;
     }
-
-    return userResult;
   }
 }

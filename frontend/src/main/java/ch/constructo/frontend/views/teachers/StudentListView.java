@@ -182,6 +182,7 @@ public class StudentListView extends MainViewFrame {
         user.setFirstName(firstName.getValue());
         user.setLastName(lastName.getValue());
         user.setUsername(username.getValue());
+        // @todo: password endcoder
         user.setPassword(password.getValue());
         user.setEmail(email.getValue());
         user.setRole(Role.STUDENT);
@@ -279,6 +280,7 @@ public class StudentListView extends MainViewFrame {
     Button delete = new Button(VaadinIcon.TRASH.create());
     delete.addThemeVariants(ButtonVariant.LUMO_ERROR);
     delete.addClickListener(e -> {
+      students.remove(user);
       userService.delete(user);
     });
     return delete;

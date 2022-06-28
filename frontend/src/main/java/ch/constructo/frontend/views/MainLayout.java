@@ -10,12 +10,22 @@ import ch.constructo.frontend.views.eap.EapView;
 import ch.constructo.frontend.views.teachers.CreateEap;
 import ch.constructo.frontend.views.teachers.StudentListView;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
+import com.vaadin.flow.component.avatar.Avatar;
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.dependency.NpmPackage;
+import com.vaadin.flow.component.dialog.Dialog;
+import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.html.*;
+import com.vaadin.flow.component.icon.VaadinIcon;
+import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.textfield.PasswordField;
+import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.RouterLink;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -87,14 +97,61 @@ public class MainLayout extends AppLayout {
     toggle.addThemeVariants(ButtonVariant.LUMO_CONTRAST);
     toggle.getElement().setAttribute("aria-label", "Menu toggle");
 
+    User user = userService.findByUsername(SecurityUtils.getCurrentLoggedUserId());
+    String name = user.getFirstName() + " " + user.getLastName();
+    Avatar avatarName = new Avatar(name);
+    Div avatarButton = new Div(avatarName);
+    avatarButton.addClickListener(e -> {
+      createProfileDialog();
+    });
+
     appBar = new AppBar("");
 
     viewTitle = new H1();
     viewTitle.addClassNames("view-title");
 
-    Header header = new Header(toggle, viewTitle);
+    Header header = new Header(toggle, viewTitle, avatarButton);
     header.addClassNames("view-header");
     return header;
+  }
+
+  private Dialog createProfileDialog(){
+    Dialog dialog = new Dialog();
+    Button cancel = new Button("Schliessen");
+    //Button logout = new Button("Loggout");
+    Anchor logout = new Anchor("/logout", "Log out");
+    FormLayout formLayout = new FormLayout();
+    Label title = new Label("Passwort ändern");
+    TextField password = new TextField("Neues Passwort");
+    TextField password2 = new TextField("Passwort wiederholen");
+    Button save = new Button("Speichern");
+    save.addClickListener(e -> {
+      if (password.getValue().equals(password2.getValue())){
+        User user = userService.findByUsername(SecurityUtils.getCurrentLoggedUserId());
+        user.setPassword(password.getValue());
+        //@todo: passwort entcoder!!
+        userService.save(user);
+      } else {
+        password.setErrorMessage("Passwörter stimmen nicht überein");
+        password.setValue("");
+        password2.setValue("");
+        password.isAutofocus();
+      }
+    });
+    formLayout.add(title, password, password2, save);
+
+    dialog.add(formLayout, cancel, logout);
+
+    /*logout.addClickListener(e -> {
+
+    });*/
+    cancel.addClickShortcut(Key.ESCAPE);
+    cancel.addClickListener(e -> {
+      dialog.close();
+    });
+
+    dialog.open();
+    return dialog;
   }
 
   private Component createDrawerContent() {

@@ -23,6 +23,7 @@ create table construction_step (
     stepType varchar(40),
     text varchar(300) not null,
     garment_id bigint not null,
+    utilities varchar(100),
     sortOrder int
 );
 
