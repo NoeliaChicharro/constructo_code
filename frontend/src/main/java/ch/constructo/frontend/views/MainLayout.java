@@ -28,12 +28,16 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.PasswordField;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.data.binder.BeanValidationBinder;
+import com.vaadin.flow.data.binder.Binder;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.VaadinSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
+import java.security.SecureRandom;
 import java.util.Optional;
 
 /**
@@ -45,6 +49,13 @@ public class MainLayout extends AppLayout {
 
   @Autowired
   private UserService userService;
+
+  private Binder<User> binder = new BeanValidationBinder<>(User.class);
+
+  @Autowired
+  private PasswordEncoder passwordEncoder;
+
+  private User currentUser;
 
   /**
    * A simple navigation item component, based on ListItem element.
@@ -129,6 +140,9 @@ public class MainLayout extends AppLayout {
     Button cancel = new Button("Schliessen");
     Button logout = new Button("Logout");
 
+    currentUser = userService.findByUsername(SecurityUtils.getCurrentLoggedUserId());
+    binder.readBean(currentUser);
+
     logout.addClickListener(buttonClickEvent -> {
       dialog.close();
       SecurityContextHolder.clearContext();
@@ -149,23 +163,26 @@ public class MainLayout extends AppLayout {
 
     FormLayout formLayout = new FormLayout();
     Label title = new Label("Passwort ändern");
-    TextField password = new TextField("Neues Passwort");
+    TextField plainPw = new TextField("Neues Passwort");
     TextField password2 = new TextField("Passwort wiederholen");
     Button save = new Button("Speichern");
+    binder.bind(plainPw, "plainPw");
     save.addClickListener(e -> {
-      if (password.getValue().equals(password2.getValue())){
-        User user = userService.findByUsername(SecurityUtils.getCurrentLoggedUserId());
-        user.setPassword(password.getValue());
-        //@todo: passwort entcoder!!
-        userService.save(user);
+
+      if (plainPw.getValue().equals(password2.getValue())){
+        if (binder.isValid()){
+          saveStudent(currentUser);
+          dialog.close();
+        }
+
       } else {
-        password.setErrorMessage("Passwörter stimmen nicht überein");
-        password.setValue("");
+        plainPw.setErrorMessage("Passwörter stimmen nicht überein");
+        plainPw.setValue("");
         password2.setValue("");
-        password.isAutofocus();
+        plainPw.isAutofocus();
       }
     });
-    formLayout.add(title, password, password2, save);
+    formLayout.add(title, plainPw, password2, save);
 
     HorizontalLayout buttonLayout = new HorizontalLayout(cancel, logout);
     buttonLayout.setJustifyContentMode(FlexComponent.JustifyContentMode.EVENLY);
@@ -178,6 +195,18 @@ public class MainLayout extends AppLayout {
 
     dialog.open();
     return dialog;
+  }
+
+  private void saveStudent(User user) {
+    try{
+      binder.writeBean(currentUser);
+      String plainPw = user.getPlainPw();
+      user.setPassword(passwordEncoder.encode(plainPw));
+      userService.save(user);
+
+    }catch (Exception e){
+      e.printStackTrace();
+    }
   }
 
   private Component createDrawerContent() {

@@ -26,7 +26,7 @@ public class ConfigureUIServiceInitListener implements VaadinServiceInitListener
     final boolean accessGranted = SecurityUtils.isAccessGranted(event.getNavigationTarget());
     if (!accessGranted) {
       if (SecurityUtils.isUserLoggedIn()) {
-        Html msg = new Html("<div>" +
+        /*Html msg = new Html("<div>" +
             "You don't have enough privilege to access this part of the application." +
             "</div>");
         Notification notification = new Notification( msg);
@@ -34,18 +34,10 @@ public class ConfigureUIServiceInitListener implements VaadinServiceInitListener
         notification.setPosition( Notification.Position.MIDDLE);
         notification.open();
         notification.addThemeVariants(NotificationVariant.LUMO_CONTRAST);
-        event.rerouteTo("");
+        event.rerouteTo("");*/
 
       } else {
-       /* if ( ( !LoginView.class.equals(event.getNavigationTarget()) &&
-            !RegistrationView.class.equals(event.getNavigationTarget()) )
-            && !SecurityUtils.isUserLoggedIn()) {
-
-          boolean needsReroute = !RegistrationView.class.equals(event.getNavigationTarget());
-          if(needsReroute){
-            event.rerouteTo(LoginView.class);
-          }
-        }*/
+       /* nothing for now -> registration view */
       }
     }
   }
