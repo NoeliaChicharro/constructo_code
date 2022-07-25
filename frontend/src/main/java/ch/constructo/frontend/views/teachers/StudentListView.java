@@ -137,7 +137,6 @@ public class StudentListView extends MainViewFrame {
     binder.bind(firstName, "firstName");
     binder.bind(lastName, "lastName");
     binder.bind(username, "username");
-//    binder.bind(role, "role");
     binder.bind(plainPw, "plainPw");
     binder.bind(email, "email");
 
@@ -203,8 +202,6 @@ public class StudentListView extends MainViewFrame {
       user.setRole(Role.STUDENT);
       userService.save(user);
       students.add(user);
-      //Notification.show("Schüler gespeichert");
-
       findAllStudents();
 
     }catch (Exception e){
@@ -291,6 +288,7 @@ public class StudentListView extends MainViewFrame {
     delete.addClickListener(e -> {
       students.remove(user);
       userService.delete(user);
+      findAllStudents();
     });
     return delete;
   }
