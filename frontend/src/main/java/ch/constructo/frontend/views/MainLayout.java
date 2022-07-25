@@ -7,6 +7,7 @@ import ch.constructo.frontend.security.SecurityUtils;
 import ch.constructo.frontend.ui.components.navigation.AppBar;
 import ch.constructo.frontend.views.dashboard.DashboardView;
 import ch.constructo.frontend.views.eap.EapView;
+import ch.constructo.frontend.views.login.LoginView;
 import ch.constructo.frontend.views.teachers.CreateEap;
 import ch.constructo.frontend.views.teachers.StudentListView;
 import com.vaadin.flow.component.Component;
@@ -28,7 +29,9 @@ import com.vaadin.flow.component.textfield.PasswordField;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.RouterLink;
+import com.vaadin.flow.server.VaadinSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 
 import java.util.Optional;
 
@@ -118,8 +121,27 @@ public class MainLayout extends AppLayout {
   private Dialog createProfileDialog(){
     Dialog dialog = new Dialog();
     Button cancel = new Button("Schliessen");
-    //Button logout = new Button("Loggout");
-    Anchor logout = new Anchor("/logout", "Log out");
+    Button logout = new Button("Logout");
+
+    logout.addClickListener(buttonClickEvent -> {
+      dialog.close();
+      SecurityContextHolder.clearContext();
+      //SecurityUtils.getInstance().clearContext();
+      VaadinSession current = VaadinSession.getCurrent();
+      if (current != null) {
+        try {
+          current.getSession().invalidate();
+          current.close();
+        } catch (Exception closeSessionException) {
+          // do nothing
+        } finally {
+          getUI().ifPresent((ui ->
+              ui.navigate(LoginView.class))
+          );
+        }
+      }
+    });
+
     FormLayout formLayout = new FormLayout();
     Label title = new Label("Passwort ändern");
     TextField password = new TextField("Neues Passwort");

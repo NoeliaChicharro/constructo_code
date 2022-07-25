@@ -1,7 +1,11 @@
 package ch.constructo.frontend.security;
 
 import ch.constructo.frontend.ui.exceptions.AccessDeniedException;
+import ch.constructo.frontend.views.login.LoginView;
+import com.vaadin.flow.component.Html;
 import com.vaadin.flow.component.UI;
+import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.notification.NotificationVariant;
 import com.vaadin.flow.router.BeforeEnterEvent;
 import com.vaadin.flow.server.ServiceInitEvent;
 import com.vaadin.flow.server.VaadinServiceInitListener;
@@ -22,9 +26,18 @@ public class ConfigureUIServiceInitListener implements VaadinServiceInitListener
     final boolean accessGranted = SecurityUtils.isAccessGranted(event.getNavigationTarget());
     if (!accessGranted) {
       if (SecurityUtils.isUserLoggedIn()) {
-        event.rerouteToError(AccessDeniedException.class);
+        Html msg = new Html("<div>" +
+            "You don't have enough privilege to access this part of the application." +
+            "</div>");
+        Notification notification = new Notification( msg);
+        notification.setDuration(5000);
+        notification.setPosition( Notification.Position.MIDDLE);
+        notification.open();
+        notification.addThemeVariants(NotificationVariant.LUMO_CONTRAST);
+        event.rerouteTo("");
+
       } else {
-        /*if ( ( !LoginView.class.equals(event.getNavigationTarget()) &&
+       /* if ( ( !LoginView.class.equals(event.getNavigationTarget()) &&
             !RegistrationView.class.equals(event.getNavigationTarget()) )
             && !SecurityUtils.isUserLoggedIn()) {
 
