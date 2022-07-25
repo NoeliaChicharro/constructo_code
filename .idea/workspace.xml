@@ -13,7 +13,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +224,7 @@
       <workItem from="1656332815784" duration="24000" />
       <workItem from="1656334073144" duration="83000" />
       <workItem from="1656334313014" duration="5286000" />
-      <workItem from="1656407634594" duration="16502000" />
+      <workItem from="1656407634594" duration="20430000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -523,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658731461873</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="refresh grid if a student gets deleted">
+      <created>1658731749631</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1658731749631</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,7 +572,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactoring" />
     <MESSAGE value="add javadocs comments" />
     <MESSAGE value="insert constructionSteps for the base pattern garment" />
     <MESSAGE value="basic components for tool view" />
@@ -586,7 +596,8 @@
     <MESSAGE value="readme" />
     <MESSAGE value="fix logout issue" />
     <MESSAGE value="fix password entcoder issue (binding)" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix password entcoder issue (binding)" />
+    <MESSAGE value="refresh grid if a student gets deleted" />
+    <option name="LAST_COMMIT_MESSAGE" value="refresh grid if a student gets deleted" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -612,11 +623,6 @@
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java</url>
-          <line>124</line>
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/login/LoginView.java</url>
           <line>36</line>
           <option name="timeStamp" value="89" />
@@ -640,6 +646,16 @@
           <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java</url>
           <line>185</line>
           <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java</url>
+          <line>160</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java</url>
+          <line>157</line>
+          <option name="timeStamp" value="102" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

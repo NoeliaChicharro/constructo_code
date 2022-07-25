@@ -24,6 +24,7 @@ import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.PasswordField;
 import com.vaadin.flow.component.textfield.TextField;
@@ -103,7 +104,8 @@ public class MainLayout extends AppLayout {
     User user = userService.findByUsername(SecurityUtils.getCurrentLoggedUserId());
     String name = user.getFirstName() + " " + user.getLastName();
     Avatar avatarName = new Avatar(name);
-    Div avatarButton = new Div(avatarName);
+    HorizontalLayout avatarButton = new HorizontalLayout(avatarName);
+    avatarButton.setAlignItems(FlexComponent.Alignment.CENTER);
     avatarButton.addClickListener(e -> {
       createProfileDialog();
     });
@@ -113,7 +115,11 @@ public class MainLayout extends AppLayout {
     viewTitle = new H1();
     viewTitle.addClassNames("view-title");
 
-    Header header = new Header(toggle, viewTitle, avatarButton);
+    HorizontalLayout titleContainer = new HorizontalLayout(toggle, viewTitle);
+    titleContainer.getStyle().set("width", "95%");
+    titleContainer.setJustifyContentMode(FlexComponent.JustifyContentMode.START);
+    titleContainer.setAlignItems(FlexComponent.Alignment.CENTER);
+    Header header = new Header(titleContainer, avatarButton);
     header.addClassNames("view-header");
     return header;
   }
@@ -126,7 +132,6 @@ public class MainLayout extends AppLayout {
     logout.addClickListener(buttonClickEvent -> {
       dialog.close();
       SecurityContextHolder.clearContext();
-      //SecurityUtils.getInstance().clearContext();
       VaadinSession current = VaadinSession.getCurrent();
       if (current != null) {
         try {
@@ -162,11 +167,10 @@ public class MainLayout extends AppLayout {
     });
     formLayout.add(title, password, password2, save);
 
-    dialog.add(formLayout, cancel, logout);
+    HorizontalLayout buttonLayout = new HorizontalLayout(cancel, logout);
+    buttonLayout.setJustifyContentMode(FlexComponent.JustifyContentMode.EVENLY);
 
-    /*logout.addClickListener(e -> {
-
-    });*/
+    dialog.add(formLayout, buttonLayout);
     cancel.addClickShortcut(Key.ESCAPE);
     cancel.addClickListener(e -> {
       dialog.close();
