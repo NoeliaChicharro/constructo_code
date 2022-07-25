@@ -29,9 +29,7 @@ import com.vaadin.flow.component.Component;
 
 import java.util.*;
 
-import static java.lang.String.format;
 
-//@Component
 @PageTitle("Epa")
 @Route(value = "epa", layout = MainLayout.class)
 @Secured({"ROLE_ADMIN", "ROLE_USER"})

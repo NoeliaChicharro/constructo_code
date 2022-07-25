@@ -23,7 +23,7 @@ public class CreateEap extends MainViewFrame {
 
   private Component createContent(){
     VerticalLayout layout = new VerticalLayout();
-    H2 title = new H2("Erstelle einen neuen Raport");
+    H2 title = new H2("Das erstellen von neuen Berichten wird in Kürze möglich sein.");
 
     layout.add(title);
     return layout;

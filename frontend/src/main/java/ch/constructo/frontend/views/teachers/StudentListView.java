@@ -20,8 +20,6 @@ import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.grid.dataview.GridListDataView;
-import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
@@ -31,7 +29,6 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.binder.BeanValidationBinder;
 import com.vaadin.flow.data.binder.Binder;
-import com.vaadin.flow.data.binder.ValidationException;
 import com.vaadin.flow.data.provider.DataProvider;
 import com.vaadin.flow.data.provider.ListDataProvider;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
@@ -40,6 +37,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.security.SecureRandom;
 import java.util.ArrayList;
@@ -56,6 +54,9 @@ public class StudentListView extends MainViewFrame {
 
   private ListDataProvider<User> userDataProviderListener;
 
+  @Autowired
+  private PasswordEncoder passwordEncoder;
+
   //protected PatternForm form;
   private Grid<User> grid;
   private TextField searchField;
@@ -69,13 +70,15 @@ public class StudentListView extends MainViewFrame {
   TextField lastName = new TextField("Nachname");
   TextField username = new TextField("Benutzername");
   TextField email = new TextField("Email");
-  TextField password = new TextField("Passwort");
+  TextField plainPw = new TextField("Passwort");
   ComboBox<Role> role = new ComboBox<>("Rolle");
 
   private Button save = new Button(VaadinIcon.SAFE.create());
   private Button cancel = new Button("Abbrechen");
 
   private Binder<User> binder = new BeanValidationBinder<>(User.class);
+
+  private User currentUser;
 
   @Override
   protected void onAttach(AttachEvent attachEvent) {
@@ -115,6 +118,10 @@ public class StudentListView extends MainViewFrame {
 
     addStudentButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
     addStudentButton.addClickListener(e -> {
+      currentUser = new User();
+      SecureRandom secureRandom = new SecureRandom();
+      currentUser.setPlainPw(secureRandom.toString());
+      binder.readBean(currentUser);
       dialog.open();
     });
 
@@ -130,8 +137,9 @@ public class StudentListView extends MainViewFrame {
     binder.bind(firstName, "firstName");
     binder.bind(lastName, "lastName");
     binder.bind(username, "username");
-    binder.bind(role, "role");
-    binder.bind(password, "password");
+//    binder.bind(role, "role");
+    binder.bind(plainPw, "plainPw");
+    binder.bind(email, "email");
 
     return dialog;
   }
@@ -144,7 +152,7 @@ public class StudentListView extends MainViewFrame {
     firstName.setRequired(true);
     lastName.setRequired(true);
     username.setEnabled(false);
-    password.setEnabled(false);
+    plainPw.setEnabled(false);
 
     firstName.addValueChangeListener(e -> {
       String input = firstName.getValue().trim();
@@ -159,10 +167,7 @@ public class StudentListView extends MainViewFrame {
       username.setValue(username.getValue() + firstLetter.toLowerCase() + secondLetter.toLowerCase());
     });
 
-    SecureRandom secureRandom = new SecureRandom();
-    password.setValue(secureRandom.toString());
-
-    formLayout.add(firstName, lastName, username, email, password);
+    formLayout.add(firstName, lastName, username, email, plainPw);
     return formLayout;
   }
 
@@ -177,23 +182,9 @@ public class StudentListView extends MainViewFrame {
     cancel.addClickShortcut(Key.ESCAPE);
 
     save.addClickListener(e -> {
-      if (binder.isValid()){
-        User user = new User();
-        user.setFirstName(firstName.getValue());
-        user.setLastName(lastName.getValue());
-        user.setUsername(username.getValue());
-        // @todo: password endcoder
-        user.setPassword(password.getValue());
-        user.setEmail(email.getValue());
-        user.setRole(Role.STUDENT);
-        try {
-          binder.writeBean(user);
-          userService.save(user);
-          students.add(user);
-        } catch (ValidationException validationException) {
-          validationException.printStackTrace();
-        }
-        Notification.show("Schüler gespeichert");
+      if (
+        binder.isValid()){
+        saveStudent(currentUser);
         dialog.close();
       }
     });
@@ -201,6 +192,24 @@ public class StudentListView extends MainViewFrame {
 
     layout.add(save, cancel);
     return layout;
+  }
+
+  private void saveStudent(User user) {
+    try{
+      binder.writeBean(currentUser);
+
+      String plainPw = user.getPlainPw();
+      user.setPassword(passwordEncoder.encode(plainPw));
+      user.setRole(Role.STUDENT);
+      userService.save(user);
+      students.add(user);
+      //Notification.show("Schüler gespeichert");
+
+      findAllStudents();
+
+    }catch (Exception e){
+      e.printStackTrace();
+    }
   }
 
   private Component setupGrid(){

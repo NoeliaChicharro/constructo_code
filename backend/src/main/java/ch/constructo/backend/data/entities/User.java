@@ -31,8 +31,10 @@ public class User extends AbstractEntity {
 
   @NotNull
   @NotEmpty
-  @Size(min = 3, max = 40)
+  @Size(min = 3, max = 200)
   private String password;
+
+  private transient String plainPw;
 
   @Enumerated(EnumType.STRING)
   private Role role;
@@ -86,5 +88,13 @@ public class User extends AbstractEntity {
 
   public void setRole(Role role) {
     this.role = role;
+  }
+
+  public String getPlainPw() {
+    return plainPw;
+  }
+
+  public void setPlainPw(String plainPw) {
+    this.plainPw = plainPw;
   }
 }
