@@ -18,11 +18,19 @@
       <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/backend/derby.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/derby.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/ConfigureUIServiceInitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/ConfigureUIServiceInitListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/login/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/login/LoginView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/CreateEap.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/CreateEap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo$LineAwesomeIcon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout$MenuItemInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/ch/constructo/frontend/views/MainLayout.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,11 +115,11 @@
       <recent name="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/blouse" />
       <recent name="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images" />
       <recent name="$PROJECT_DIR$/frontend/src/main/resources/webapp" />
-      <recent name="$PROJECT_DIR$/frontend/src/main/resources/images" />
-      <recent name="$PROJECT_DIR$/backend/src/test/java/ch/constructo/backend/config" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ch.constructo.frontend.views.teachers" />
@@ -229,7 +237,7 @@
       <workItem from="1656332815784" duration="24000" />
       <workItem from="1656334073144" duration="83000" />
       <workItem from="1656334313014" duration="5286000" />
-      <workItem from="1656407634594" duration="8149000" />
+      <workItem from="1656407634594" duration="16165000" />
     </task>
     <task id="LOCAL-00001" summary="add git ignore files">
       <created>1651238460545</created>
@@ -504,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656406817617</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="smaller changes and readme">
+      <created>1658477852435</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1658477852435</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +557,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="framework" />
     <MESSAGE value="* make grid selectable&#10;* provide right entity in selection" />
     <MESSAGE value="* make grid selectable&#10;* provide right entity in selection&#10;* reroute on selection" />
     <MESSAGE value="add missing findOne(Long id) Method to all repositories, and services" />
@@ -567,7 +581,8 @@
     <MESSAGE value="create student list view with filter function" />
     <MESSAGE value="create dialog to add new student&#10;&#10;add column in grid to delete user" />
     <MESSAGE value="finish tool view" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish tool view" />
+    <MESSAGE value="smaller changes and readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="smaller changes and readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -593,34 +608,39 @@
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java</url>
-          <line>182</line>
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java</url>
-          <line>188</line>
-          <option name="timeStamp" value="81" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java</url>
-          <line>187</line>
-          <option name="timeStamp" value="82" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/ConfigureUIServiceInitListener.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="83" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/SecurityConfiguration.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainLayout.java</url>
-          <line>121</line>
+          <line>124</line>
           <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/login/LoginView.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-login-flow/23.0.7/vaadin-login-flow-23.0.7.jar!/com/vaadin/flow/component/login/AbstractLogin.class</url>
+          <line>68</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java</url>
+          <line>210</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java</url>
+          <line>200</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java</url>
+          <line>186</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java</url>
+          <line>205</line>
+          <option name="timeStamp" value="99" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -4,7 +4,7 @@
 .settings
 .project
 .classpath
-
+derby.log
 *.iml
 .DS_Store
 
