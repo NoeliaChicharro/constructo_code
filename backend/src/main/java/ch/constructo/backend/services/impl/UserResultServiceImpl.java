@@ -87,4 +87,9 @@ public class UserResultServiceImpl implements UserResultService {
 
   @Override
   public UserResult findByUser(User user){return repository.findByUser(user);}
+
+  @Override
+  public UserResult findByUserAndGarment(User user, Garment garment){
+    return repository.findByUserAndGarment(user, garment);
+  }
 }

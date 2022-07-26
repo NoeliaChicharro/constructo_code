@@ -34,6 +34,8 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.provider.ListDataProvider;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
+import com.vaadin.flow.router.BeforeEvent;
+import com.vaadin.flow.router.HasUrlParameter;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +47,7 @@ import java.util.List;
 @PageTitle("Epa | Tool")
 @Route(value = "epaTool", layout = MainLayout.class)
 @Secured({"ROLE_ADMIN", "ROLE_USER"})
-public class ConstructionView extends MainViewFrame {
+public class ConstructionView extends MainViewFrame implements HasUrlParameter<Long> {
 
   @Autowired
   private GarmentService garmentService;
@@ -70,13 +72,13 @@ public class ConstructionView extends MainViewFrame {
   private VerticalLayout gridWrapper;
   private HorizontalLayout buttonLayout;
   VerticalLayout imageLayout;
-  private ListDataProvider<ConstructionStep> listDataProvider;
   private List<ConstructionStep> constructionSteps = new ArrayList<>();
   private List<ConstructionStep> correctAnswers = new ArrayList<>();
   private List<ConstructionStep> actualSteps;
 
   private UserResult userResult;
   private User user;
+  private Garment garment;
 
   private static Div hint;
 
@@ -113,7 +115,7 @@ public class ConstructionView extends MainViewFrame {
   }
 
   private Component setupForm() {
-    stepText = new TextField("Arbeitsmittel");
+    stepText = new TextField("Arbeitsschritt");
     stepUtility = new TextField("Betriebsmittel");
 
     send = new Button(new MenuItemInfo.LineAwesomeIcon("la la-arrow-right"));
@@ -128,7 +130,7 @@ public class ConstructionView extends MainViewFrame {
       }
       ConstructionStep constructionStep = new ConstructionStep();
       constructionStep.setText(stepText.getValue());
-      constructionStep.setGarment(findGarmentForNow());
+      constructionStep.setGarment(garment);
       constructionStep.setUtilities(stepUtility.getValue());
 
       sendStep(constructionStep);
@@ -191,10 +193,10 @@ public class ConstructionView extends MainViewFrame {
     grid = new Grid<>(ConstructionStep.class, false);
     grid.setAllRowsVisible(true);
     grid.addColumn(new ComponentRenderer<>(this::createText))
-        .setHeader("Arbeitsmittel")
+        .setHeader("Arbeitsschritt")
         .setResizable(true);
     grid.addColumn(new ComponentRenderer<>(this::createUtitity))
-        .setHeader("Arbeitsmittel")
+        .setHeader("Betriebsmittel")
         .setResizable(true);
     grid.setItems(constructionSteps);
 
@@ -287,11 +289,7 @@ public class ConstructionView extends MainViewFrame {
 
   private void findGarmentsConstructionStep(){
     actualSteps = new ArrayList<>();
-    actualSteps = constructionStepService.findByGarment(findGarmentForNow());
-  }
-
-  private Garment findGarmentForNow(){
-    return garmentService.findOne(1L);
+    actualSteps = constructionStepService.findByGarment(garment);
   }
 
   private User findUser(){
@@ -300,15 +298,19 @@ public class ConstructionView extends MainViewFrame {
   }
 
   private void findUserResult(){
-    // @todo: check for garment two
-    userResult = resultService.findByUser(user);
+    userResult = resultService.findByUserAndGarment(user, garment);
     if (userResult == null){
       UserResult newUserResult = new UserResult();
       newUserResult.setUser(findUser());
       newUserResult.setPassed(false);
-      newUserResult.setGarment(findGarmentForNow());
+      newUserResult.setGarment(garment);
       newUserResult.setRightAmount(0);
       userResult = resultService.save(newUserResult);
     }
+  }
+
+  @Override
+  public void setParameter(BeforeEvent beforeEvent, Long id) {
+    garment = garmentService.findOne(id);
   }
 }

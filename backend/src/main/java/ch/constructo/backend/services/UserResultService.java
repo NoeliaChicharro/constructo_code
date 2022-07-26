@@ -11,4 +11,6 @@ public interface UserResultService extends BaseDataService<UserResult> {
   UserResult findByPassed(boolean passed);
 
   UserResult findByUser(User user);
+
+  UserResult findByUserAndGarment(User user, Garment garment);
 }
