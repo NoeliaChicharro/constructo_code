@@ -11,15 +11,14 @@ import org.slf4j.LoggerFactory;
 public class MainViewFrame extends Composite<Div> implements HasStyle{
   private static final Logger log = LoggerFactory.getLogger(MainViewFrame.class);
 
-  private String CLASS_NAME = "view-frame";
-
-  private Div header;
+  private final Div header;
 
   public VerticalLayout wrapper;
-  private Div content;
-  private Div footer;
+  private final Div content;
+  private final Div footer;
 
   public MainViewFrame() {
+    String CLASS_NAME = "view-frame";
     setClassName(CLASS_NAME);
 
     header = new Div();

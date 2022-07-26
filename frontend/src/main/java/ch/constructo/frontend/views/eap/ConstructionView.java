@@ -65,15 +65,12 @@ public class ConstructionView extends MainViewFrame implements HasUrlParameter<L
   private TextField stepText;
   private TextField stepUtility;
   private Button send;
-  private Button cancel;
   private Button save;
 
   private Grid grid;
-  private VerticalLayout gridWrapper;
-  private HorizontalLayout buttonLayout;
   VerticalLayout imageLayout;
-  private List<ConstructionStep> constructionSteps = new ArrayList<>();
-  private List<ConstructionStep> correctAnswers = new ArrayList<>();
+  private final List<ConstructionStep> constructionSteps = new ArrayList<>();
+  private final List<ConstructionStep> correctAnswers = new ArrayList<>();
   private List<ConstructionStep> actualSteps;
 
   private UserResult userResult;
@@ -188,7 +185,7 @@ public class ConstructionView extends MainViewFrame implements HasUrlParameter<L
   }
 
   private Component setupGrid() {
-    gridWrapper = new VerticalLayout();
+    VerticalLayout gridWrapper = new VerticalLayout();
     gridWrapper.setPadding(false);
     grid = new Grid<>(ConstructionStep.class, false);
     grid.setAllRowsVisible(true);
@@ -228,10 +225,10 @@ public class ConstructionView extends MainViewFrame implements HasUrlParameter<L
   }
 
   private Component setupButtons(){
-    buttonLayout = new HorizontalLayout();
+    HorizontalLayout buttonLayout = new HorizontalLayout();
     buttonLayout.setPadding(false);
 
-    cancel = new Button("Abbrechen");
+    Button cancel = new Button("Abbrechen");
     cancel.addThemeVariants(ButtonVariant.LUMO_CONTRAST);
     cancel.addClickListener(e -> {
       UI.getCurrent().navigate(EapView.class);

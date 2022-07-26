@@ -33,15 +33,7 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
 
   @Override
   public void beforeEnter(BeforeEnterEvent beforeEnterEvent) {
-/*
-    if (!beforeEnterEvent.getLocation()
-        .getQueryParameters()
-        .getParameters()
-        .getOrDefault("error", Collections.emptyList())
-        .isEmpty()){
-      login.setError(true);
-    }
-*/
+    // do nothing (needed for view component)
   }
 
 }

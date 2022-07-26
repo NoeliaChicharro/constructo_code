@@ -39,9 +39,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
   @Bean
   public AuthenticationProvider constructoAppAuthenticationProvider() {
-    AuthenticationProvider provider = new ConstructoAuthenticationProvidor();
 
-    return provider;
+    return new ConstructoAuthenticationProvidor();
   }
 
   /**

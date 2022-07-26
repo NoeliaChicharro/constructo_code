@@ -4,7 +4,7 @@ public enum BoxSizing {
 
   BORDER_BOX("border-box"), CONTENT_BOX("content-box");
 
-  private String value;
+  private final String value;
 
   BoxSizing(String value) {
     this.value = value;

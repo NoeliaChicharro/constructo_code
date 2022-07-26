@@ -26,18 +26,9 @@ public class ConfigureUIServiceInitListener implements VaadinServiceInitListener
     final boolean accessGranted = SecurityUtils.isAccessGranted(event.getNavigationTarget());
     if (!accessGranted) {
       if (SecurityUtils.isUserLoggedIn()) {
-        /*Html msg = new Html("<div>" +
-            "You don't have enough privilege to access this part of the application." +
-            "</div>");
-        Notification notification = new Notification( msg);
-        notification.setDuration(5000);
-        notification.setPosition( Notification.Position.MIDDLE);
-        notification.open();
-        notification.addThemeVariants(NotificationVariant.LUMO_CONTRAST);
-        event.rerouteTo("");*/
-
+        // nothing for now
       } else {
-       /* nothing for now -> registration view */
+       // nothing for now -> registration view
       }
     }
   }

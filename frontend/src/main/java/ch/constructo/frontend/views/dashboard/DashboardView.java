@@ -18,12 +18,9 @@ import org.springframework.security.access.annotation.Secured;
 @Secured({"ROLE_ADMIN", "ROLE_USER"})
 public class DashboardView extends VerticalLayout {
 
-  private H2 welcome;
-  private Image background;
-
   public DashboardView() {
-    welcome = new H2("Willkommen zurück " + SecurityUtils.getCurrentLoggedUserId());
-    background = new Image();
+    H2 welcome = new H2("Willkommen zurück " + SecurityUtils.getCurrentLoggedUserId());
+    Image background = new Image();
     background.setMaxWidth("100vw");
     background.setMaxHeight("70vh");
     background.setSrc("images/dashboard/ladies.png");

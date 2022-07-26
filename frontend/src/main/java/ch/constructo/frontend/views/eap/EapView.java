@@ -39,7 +39,6 @@ public class EapView extends MainViewFrame {
   private GarmentService garmentService;
 
   private Grid<Garment> grid;
-  private ListDataProvider<Garment> garmentListDataProvider;
 
   @Override
   protected void onAttach(AttachEvent attachEvent) {
@@ -132,6 +131,7 @@ public class EapView extends MainViewFrame {
   }
 
   private void fillGarmentGrid(Collection<Garment> content) {
+    ListDataProvider<Garment> garmentListDataProvider;
     if(content.size()==0){
       garmentListDataProvider = DataProvider.ofCollection(new ArrayList<>());
       grid.setDataProvider(garmentListDataProvider);

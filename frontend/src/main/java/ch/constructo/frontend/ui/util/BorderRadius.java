@@ -7,7 +7,7 @@ public enum BorderRadius {
 
   _50("50%");
 
-  private String value;
+  private final String value;
 
   BorderRadius(String value) {
     this.value = value;

@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="4" />
-  </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="frontend:war exploded" />
@@ -13,7 +10,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/sql/V1.0.0__initDB.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/CurrentUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/UserSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config/base/BasePersistenceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config/base/BasePersistenceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/ConstructionStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/entities/ConstructionStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/ConfigureUIServiceInitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/ConfigureUIServiceInitListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/SecurityUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/SecurityUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/security/UserDetailsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/layout/Horizontal.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/layout/Horizontal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/layout/Size.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/layout/Size.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/layout/Top.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/layout/Top.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/BorderRadius.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/BorderRadius.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/BoxSizing.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/BoxSizing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/Overflow.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/Overflow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/ui/util/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainViewFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/MainViewFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/dashboard/DashboardView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/dashboard/DashboardView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/EapView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/login/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/login/LoginView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/empty-plant.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/sleeve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/META-INF/resources/images/empty-plant.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/target/classes/META-INF/resources/offline-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/target/classes/META-INF/resources/offline-page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,8 +111,10 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/resources/META-INF/resources/images/blouse",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "7dfce86618caec0fb77ddb78de2cfa8b"
+    "spring.configuration.checksum": "7dfce86618caec0fb77ddb78de2cfa8b",
+    "ts.external.directory.path": "/Users/nch/Documents/constructo_project/constructo_code/frontend/node_modules/typescript/lib"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -221,14 +248,7 @@
       <workItem from="1656332815784" duration="24000" />
       <workItem from="1656334073144" duration="83000" />
       <workItem from="1656334313014" duration="5286000" />
-      <workItem from="1656407634594" duration="23846000" />
-    </task>
-    <task id="LOCAL-00001" summary="add git ignore files">
-      <created>1651238460545</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1651238460545</updated>
+      <workItem from="1656407634594" duration="25490000" />
     </task>
     <task id="LOCAL-00002" summary="add all services">
       <created>1651241487266</created>
@@ -559,7 +579,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658834497894</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="fix username generator issue">
+      <created>1658834684087</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1658834684087</updated>
+    </task>
+    <task id="LOCAL-00050" summary="add offline landing page">
+      <created>1658834737070</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1658834737071</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,8 +631,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fill grids with dummy data and check user input" />
-    <MESSAGE value="find current user for userResult" />
     <MESSAGE value="some more tests" />
     <MESSAGE value="display user input in grid if answer is correct" />
     <MESSAGE value="insert Image if answer is correct" />
@@ -622,7 +654,9 @@
     <MESSAGE value="fix change password binding" />
     <MESSAGE value="add more images" />
     <MESSAGE value="* add garment as router parameter &#10;* add new query for userResult" />
-    <option name="LAST_COMMIT_MESSAGE" value="* add garment as router parameter &#10;* add new query for userResult" />
+    <MESSAGE value="fix username generator issue" />
+    <MESSAGE value="add offline landing page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add offline landing page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -646,11 +680,6 @@
           <url>file://$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/config/base/DatabaseProperties.java</url>
           <line>37</line>
           <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/login/LoginView.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="89" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-login-flow/23.0.7/vaadin-login-flow-23.0.7.jar!/com/vaadin/flow/component/login/AbstractLogin.class</url>

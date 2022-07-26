@@ -52,15 +52,12 @@ public class StudentListView extends MainViewFrame {
   @Autowired
   protected UserService userService;
 
-  private ListDataProvider<User> userDataProviderListener;
-
   @Autowired
   private PasswordEncoder passwordEncoder;
 
   //protected PatternForm form;
   private Grid<User> grid;
   private TextField searchField;
-  private Button addStudentButton;
   private Dialog dialog;
   List<User> students;
 
@@ -77,10 +74,10 @@ public class StudentListView extends MainViewFrame {
   private String firstLetter = "";
   private String secondLetters = "";
 
-  private Button save = new Button(VaadinIcon.SAFE.create());
-  private Button cancel = new Button("Abbrechen");
+  private final Button save = new Button(VaadinIcon.SAFE.create());
+  private final Button cancel = new Button("Abbrechen");
 
-  private Binder<User> binder = new BeanValidationBinder<>(User.class);
+  private final Binder<User> binder = new BeanValidationBinder<>(User.class);
 
   private User currentUser;
 
@@ -117,7 +114,7 @@ public class StudentListView extends MainViewFrame {
   }
 
   private Component addButtonDialog(){
-    addStudentButton = new Button(VaadinIcon.PLUS.create());
+    Button addStudentButton = new Button(VaadinIcon.PLUS.create());
     setupDialog();
 
     addStudentButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
@@ -173,8 +170,8 @@ public class StudentListView extends MainViewFrame {
 
     save.addClickListener(e -> {
       firstLetter = String.valueOf(firstName.getValue().charAt(0));
-      secondLetters = String.valueOf(lastName.getValue().charAt(0) +
-          String.valueOf(lastName.getValue().charAt(1)));
+      secondLetters = lastName.getValue().charAt(0) +
+          String.valueOf(lastName.getValue().charAt(1));
       generatedUsername = firstLetter+secondLetters;
       username.setValue(generatedUsername);
       if (
@@ -301,6 +298,7 @@ public class StudentListView extends MainViewFrame {
   }
 
   private void fillUserGrid(Collection<User> content) {
+    ListDataProvider<User> userDataProviderListener;
     if(content.size()==0){
       userDataProviderListener = DataProvider.ofCollection(new ArrayList<>());
       grid.setDataProvider(userDataProviderListener);

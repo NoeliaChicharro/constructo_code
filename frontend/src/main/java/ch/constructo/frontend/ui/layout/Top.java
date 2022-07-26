@@ -13,8 +13,8 @@ public enum Top implements Size{
       "var(--lumo-space-r-l)",
       null), RESPONSIVE_X("var(--lumo-space-r-x)", null);
 
-  private String variable;
-  private String spacingClassName;
+  private final String variable;
+  private final String spacingClassName;
 
   Top(String variable, String spacingClassName) {
     this.variable = variable;

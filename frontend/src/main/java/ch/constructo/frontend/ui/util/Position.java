@@ -4,7 +4,7 @@ public enum Position {
 
   ABSOLUTE("absolute"), FIXED("fixed"), RELATIVE("relative");
 
-  private String value;
+  private final String value;
 
   Position(String value) {
     this.value = value;

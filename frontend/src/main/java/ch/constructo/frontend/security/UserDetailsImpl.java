@@ -79,7 +79,7 @@ public class UserDetailsImpl implements UserDetails, Serializable {
 
     setUsername(user.getUsername());
     setPassword(user.getPassword());
-    setEnabled(true);       //@TODO implement correct state here if user contains a user state
+    setEnabled(true);
 
     setAccountNonLocked(true);
     setAccountNonExpired(true);

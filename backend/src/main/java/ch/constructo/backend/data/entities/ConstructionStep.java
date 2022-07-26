@@ -17,7 +17,6 @@ public class ConstructionStep extends AbstractEntity {
   @Size(max = 300)
   private String text;
 
-  // @todo list
   @ManyToOne
   @JoinColumn(name = "garment_id")
   private Garment garment;

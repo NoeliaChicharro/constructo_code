@@ -33,7 +33,7 @@ public abstract class BasePersistenceConfig {
   protected final Logger log = LoggerFactory.getLogger(this.getClass());
 
 
-  private static Map<String, Boolean> alreadyInitialized = Collections.synchronizedMap(new HashMap<>());
+  private static final Map<String, Boolean> alreadyInitialized = Collections.synchronizedMap(new HashMap<>());
 
   public PlatformTransactionManager transactionManager() {
     EntityManagerFactory factory = entityManagerFactory().getObject();
