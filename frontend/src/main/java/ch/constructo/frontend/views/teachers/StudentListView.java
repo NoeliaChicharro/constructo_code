@@ -229,7 +229,7 @@ public class StudentListView extends MainViewFrame {
         .setHeader("")
         .setResizable(true);
 
-    students = createStudentList();
+    students = executeFindAllUsers();
     GridListDataView<User> dataView = grid.setItems(students);
     searchField = new TextField();
     searchField.setWidth("50%");
@@ -287,7 +287,7 @@ public class StudentListView extends MainViewFrame {
   }
 
   protected List<User> executeFindAllUsers() {
-    return userService.findAll();
+    return userService.findByRole(Role.STUDENT);
   }
 
   void findAllStudents() {

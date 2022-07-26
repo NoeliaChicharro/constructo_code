@@ -1,9 +1,12 @@
 package ch.constructo.backend.data.repositories;
 
 import ch.constructo.backend.data.entities.User;
+import ch.constructo.backend.data.enums.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+
+import java.util.List;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
@@ -24,4 +27,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
    */
   @Query("select a from User a WHERE a.id = :id")
   User findOne(@Param("id") Long id);
+
+  @Query("select a from User a WHERE a.role = :role")
+  List<User> findByRole(@Param("role")Role role);
 }

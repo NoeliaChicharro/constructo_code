@@ -1,6 +1,7 @@
 package ch.constructo.backend.services.impl;
 
 import ch.constructo.backend.data.entities.User;
+import ch.constructo.backend.data.enums.Role;
 import ch.constructo.backend.data.repositories.UserRepository;
 import ch.constructo.backend.services.UserService;
 import org.slf4j.Logger;
@@ -77,4 +78,7 @@ public class UserServiceImpl implements UserService {
   public User findByUsername(String username) {
     return repository.findByUsername(username);
   }
+
+  @Override
+  public List<User> findByRole(Role role) {return repository.findByRole(role);}
 }

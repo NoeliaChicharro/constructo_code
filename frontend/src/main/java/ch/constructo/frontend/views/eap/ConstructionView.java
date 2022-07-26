@@ -239,14 +239,14 @@ public class ConstructionView extends MainViewFrame implements HasUrlParameter<L
     save.addClickListener(e -> {
       if (userResult != null){
         int actualAmount = actualSteps.size();
-        int userAmount = userResult.getRightAmount();
+        int userAmount = constructionSteps.size();
         int allowedDifference = 10;
         if ((userAmount / actualAmount * 100) + allowedDifference >= 100){
           userResult.setPassed(true);
-          Notification.show("Du hast bestanden");
+          Notification.show("Du hast bestanden", 2000, Notification.Position.MIDDLE);
         } else {
           userResult.setPassed(false);
-          Notification.show("Leider nicht bestanden");
+          Notification.show("Leider nicht bestanden", 2000, Notification.Position.MIDDLE);
         }
         resultService.save(userResult);
       }
