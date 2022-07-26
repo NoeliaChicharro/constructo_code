@@ -73,6 +73,10 @@ public class StudentListView extends MainViewFrame {
   TextField plainPw = new TextField("Passwort");
   ComboBox<Role> role = new ComboBox<>("Rolle");
 
+  private String generatedUsername = "";
+  private String firstLetter = "";
+  private String secondLetters = "";
+
   private Button save = new Button(VaadinIcon.SAFE.create());
   private Button cancel = new Button("Abbrechen");
 
@@ -153,19 +157,6 @@ public class StudentListView extends MainViewFrame {
     username.setEnabled(false);
     plainPw.setEnabled(false);
 
-    firstName.addValueChangeListener(e -> {
-      String input = firstName.getValue().trim();
-      String firstLetter = String.valueOf(input.charAt(0));
-      username.setValue(firstLetter.toLowerCase());
-    });
-
-    lastName.addValueChangeListener(e -> {
-      String input = lastName.getValue().trim();
-      String firstLetter = String.valueOf(input.charAt(0));
-      String secondLetter = String.valueOf(input.charAt(1));
-      username.setValue(username.getValue() + firstLetter.toLowerCase() + secondLetter.toLowerCase());
-    });
-
     formLayout.add(firstName, lastName, username, email, plainPw);
     return formLayout;
   }
@@ -181,6 +172,11 @@ public class StudentListView extends MainViewFrame {
     cancel.addClickShortcut(Key.ESCAPE);
 
     save.addClickListener(e -> {
+      firstLetter = String.valueOf(firstName.getValue().charAt(0));
+      secondLetters = String.valueOf(lastName.getValue().charAt(0) +
+          String.valueOf(lastName.getValue().charAt(1)));
+      generatedUsername = firstLetter+secondLetters;
+      username.setValue(generatedUsername);
       if (
         binder.isValid()){
         saveStudent(currentUser);
