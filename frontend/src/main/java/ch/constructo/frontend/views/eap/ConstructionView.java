@@ -152,7 +152,7 @@ public class ConstructionView extends MainViewFrame {
           if (difference == 1){
            saveStep(actualStep, constructionStep);
           } else {
-            Notification.show("Reihenfolge stimmt nicht!");
+            Notification.show("Reihenfolge stimmt nicht!", 2000, Notification.Position.MIDDLE);
           }
         }
         if (constructionSteps.isEmpty()){
