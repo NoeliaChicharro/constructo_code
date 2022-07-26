@@ -47,7 +47,7 @@ In order to install and run the project on your locale machine, the following mu
     * Mac installation: https://docs.docker.com/desktop/mac/install/
 10. Download mssql server image
     `docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=wuschtel5!" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest`
-11. Create new connection in Azure Data Studio <br>
+11. Create new connection in Azure Data Studio (password: wuschtel5! (as in run command)) <br>
     ![img_2.png](img_2.png) <br>
 13. Execute sql scripts in named order <br>
     ![img.png](img.png)<br>
