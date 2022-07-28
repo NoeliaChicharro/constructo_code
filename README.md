@@ -36,7 +36,7 @@ In order to install and run the project on your locale machine, the following mu
     * Windows installation: https://phoenixnap.com/kb/install-maven-windows
     * Mac installation: https://javabydeveloper.com/how-to-install-maven-on-mac-osx
 4. Clone the project from GitHub -> https://gitbug.com/NoeliaChicharro/constructo_code
-5. Open project in IntelliJ and hit the "Trust Project" Button.
+5. Open project in IntelliJ and hit the "Trust Project" Button. -> *File - Open - select pom.xml from root - open as project*
     * if project tab does not show backend and frontend dirs as modules follow instructions in [trustProject]
 6. Run 'npm install'
 7. Execute a clean and install maven build, skipping tests. <br>
@@ -49,14 +49,14 @@ In order to install and run the project on your locale machine, the following mu
     `docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=wuschtel5!" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest`
 11. Create new connection in Azure Data Studio (password: wuschtel5! (as in run command)) <br>
     ![img_2.png](img_2.png) <br>
-13. Execute sql scripts in named order <br>
+12. Execute sql scripts in named order <br>
     ![img.png](img.png)<br>
-14. Execute another maven clean and install, this time without skipping tests
-15. Add Application as run configuration <br>
+13. Execute another maven clean and install, this time without skipping tests
+14. Add Application as run configuration <br>
     ![img_1.png](img_1.png) <br>
     * or run application from Application.java (which will automatically create a run confoguration)
-16. Open browser on http://localhost:8080
-17. Login with one of the pre-stored users.
+15. Open browser on http://localhost:8080
+16. Login with one of the pre-stored users.
   
 
 

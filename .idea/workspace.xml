@@ -11,11 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5bae31e9-e143-4a57-824f-615d64425229" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/data/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/ch/constructo/backend/services/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/eap/ConstructionView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/java/ch/constructo/frontend/views/teachers/StudentListView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,21 +74,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/resources/META-INF/resources/images/blouse",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "7dfce86618caec0fb77ddb78de2cfa8b",
-    "ts.external.directory.path": "/Users/nch/Documents/constructo_project/constructo_code/frontend/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nch/Documents/constructo_project/constructo_code/frontend/src/main/resources/META-INF/resources/images/blouse&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;7dfce86618caec0fb77ddb78de2cfa8b&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/nch/Documents/constructo_project/constructo_code/frontend/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend/src/main/resources/META-INF/resources/images/blouse" />
@@ -225,14 +220,11 @@
       <workItem from="1656332815784" duration="24000" />
       <workItem from="1656334073144" duration="83000" />
       <workItem from="1656334313014" duration="5286000" />
-      <workItem from="1656407634594" duration="29845000" />
-    </task>
-    <task id="LOCAL-00006" summary="some small changes to the view templates">
-      <created>1651329524428</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1651329524428</updated>
+      <workItem from="1656407634594" duration="31235000" />
+      <workItem from="1658904207890" duration="68000" />
+      <workItem from="1658904341952" duration="54000" />
+      <workItem from="1658907189402" duration="52000" />
+      <workItem from="1658913571344" duration="574000" />
     </task>
     <task id="LOCAL-00007" summary="review Day">
       <created>1651824695141</created>
@@ -570,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658840257342</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="add query to find user by role">
+      <created>1658842639768</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1658842639768</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,7 +607,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="save userresult" />
     <MESSAGE value="alter table ConstructionStep" />
     <MESSAGE value="add functionality for sortOrder" />
     <MESSAGE value="finalize dashboard" />
@@ -633,7 +631,8 @@
     <MESSAGE value="add framework classes" />
     <MESSAGE value="add password to readme" />
     <MESSAGE value="fix typos in construction step insertion" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix typos in construction step insertion" />
+    <MESSAGE value="add query to find user by role" />
+    <option name="LAST_COMMIT_MESSAGE" value="add query to find user by role" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
